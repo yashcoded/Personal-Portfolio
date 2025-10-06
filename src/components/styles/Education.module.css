@@ -54,10 +54,10 @@
 
 .degreeHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  text-align: center;
+  position: relative;
 }
 
 .degreeTitle {
@@ -70,6 +70,10 @@
 }
 
 .status {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: rgba(80, 250, 123, 0.2);
   color: #50fa7b;
   border: 1px solid rgba(80, 250, 123, 0.3);

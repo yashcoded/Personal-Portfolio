@@ -72,7 +72,6 @@ function Research() {
   return (
     <div className={styles.container}>
       <div className={styles.researchContent}>
-        <h1 className={styles.title}>Research Publications</h1>
         <div className={styles.researchGrid}>
         {researchPapers.map((paper, index) => {
           const IconComponent = paper.icon;

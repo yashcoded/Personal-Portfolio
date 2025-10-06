@@ -64,7 +64,6 @@ function Experience() {
       transition={{ duration: 1 }}
     >
       <div className={styles.experienceContent}>
-        <h1 className={styles.title}>Professional Experience</h1>
         {experiences.map((exp, index) => (
           <motion.div
             key={index}

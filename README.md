@@ -36,9 +36,13 @@
 **Intermediate**: C/C++
 
 ### Frameworks & Libraries
-**Expert**: React.js  
-**Advanced**: Node.js, MongoDB, PostgreSQL  
+**Expert**: React.js, Next.js  
+**Advanced**: Node.js, MongoDB, PostgreSQL, React Native, Expo  
 **Intermediate**: Spring Boot
+
+### Cloud & DevOps
+**Advanced**: AWS (DynamoDB, S3, EC2), Google Cloud Platform, Netlify  
+**Intermediate**: Docker, CI/CD Pipelines
 
 ### Operating Systems
 **Expert**: Windows  

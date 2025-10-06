@@ -181,12 +181,20 @@
 
   .jobTitle {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
+    position: relative;
   }
 
   .jobTitle h2 {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .status {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
   }
 
   .company {

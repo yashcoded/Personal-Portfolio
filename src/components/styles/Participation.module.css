@@ -5,6 +5,9 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .participationContainer {
@@ -12,6 +15,7 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  align-items: center;
 }
 
 .participationCard {
@@ -50,13 +54,16 @@
 
 .cardHeader {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .roleHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .roleTitle {
@@ -84,6 +91,7 @@
   font-weight: 600;
   color: #e50914;
   margin: 0 0 1rem 0;
+  text-align: center;
 }
 
 .description {
@@ -91,12 +99,14 @@
   color: #b3b3b3;
   margin: 0 0 1rem 0;
   font-style: italic;
+  text-align: center;
 }
 
 .roleInfo {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .duration, .location {
@@ -109,6 +119,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .achievementsTitle {
@@ -118,6 +129,7 @@
   margin: 0 0 1rem 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .achievements {
@@ -181,7 +193,7 @@
   
   .roleHeader {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
   }
   

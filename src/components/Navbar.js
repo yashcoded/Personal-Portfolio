@@ -130,6 +130,18 @@ function Navbar() {
         </li>
         <li>
           <ScrollLink
+            to="participation"
+            smooth={true}
+            duration={500}
+            className={styles.link}
+            active={activeSection === 'participation'}
+            onClick={() => handleSetActive('participation')}
+          >
+            Leadership
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
             to="contact"
             smooth={true}
             duration={500}

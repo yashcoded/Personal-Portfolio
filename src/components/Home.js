@@ -5,6 +5,7 @@ import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
 import Education from './Education';
+import Participation from './Participation';
 import { InView } from 'react-intersection-observer';
 import Projects from './Projects';
 import Research from './Research';
@@ -222,6 +223,20 @@ const Home = () => {
             >
               <h2 className={styles.sectionHeader}>Research Publications</h2>
               <Research />
+            </motion.div>
+          )}
+        </InView>
+
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+              id="participation"
+              ref={ref}
+              variants={sectionVariants}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+            >
+              <Participation />
             </motion.div>
           )}
         </InView>

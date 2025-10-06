@@ -1,0 +1,201 @@
+/* Participation.module.css */
+
+.participationContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participationContent {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+.participationCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 300px;
+  height: fit-content;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.participationCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e50914, #ff6b6b, #e50914);
+  border-radius: 20px 20px 0 0;
+}
+
+.participationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(229, 9, 20, 0.2);
+  border-color: rgba(229, 9, 20, 0.3);
+}
+
+.cardHeader {
+  margin-bottom: 1.5rem;
+}
+
+.roleTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.roleTitle h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status.current {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.organization {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e50914;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 0.5rem 0 1rem 0;
+  font-style: italic;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.duration, .location {
+  font-size: 0.9rem;
+  color: #888;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  color: #e0e0e0;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #e50914;
+  font-size: 0.8rem;
+  top: 0.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .participationContainer {
+    padding: 1rem 0;
+  }
+  
+  .participationContent {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .participationCard {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .roleTitle h2 {
+    font-size: 1.5rem;
+  }
+  
+  .organization {
+    font-size: 1.1rem;
+  }
+  
+  .metaInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .participationCard {
+    padding: 1rem;
+  }
+  
+  .roleTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .roleTitle h2 {
+    font-size: 1.3rem;
+  }
+}

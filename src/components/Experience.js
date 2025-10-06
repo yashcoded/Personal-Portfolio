@@ -31,18 +31,6 @@ function Experience() {
       status: "Completed"
     },
     {
-      title: "International Ambassador",
-      company: "Saint Louis University",
-      duration: "Jan. 2023 – Jan. 2024",
-      location: "St. Louis, MO",
-      achievements: [
-        "Helped organize events and maintain relations with international students",
-        "Provided assistance related to university resources and cultural integration",
-        "Participated in various events and coordinated multiple activities"
-      ],
-      status: "Completed"
-    },
-    {
       title: "Senior Engineer",
       company: "Eezee Business Machines",
       duration: "Jan. 2021 – Jul. 2022",

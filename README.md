@@ -164,6 +164,7 @@
 
 ## 🤝 Leadership & Involvement
 
+<<<<<<< HEAD
 ### International Ambassador
 **Saint Louis University** • Global Grad at Saint Louis University • Jan. 2023 – Jan. 2024
 * Help organize events and maintain relations with international students
@@ -187,4 +188,11 @@ This portfolio website showcases my journey as a Computer Science student and Fu
 ---
 
 *Last Updated: October 2025*
+=======
+### International Ambassidor
+**Saint Louis University** • Global Grad at Saint Louis University • January 2023 - June 2024
+* Help organize events and maintain relations with international students for any assistance related to university resources.
+* Participated in various events.
+* Coordinated various events.
+>>>>>>> d053428fcb87605dd23d76b49c2f1aac9d45643d
 

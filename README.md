@@ -23,11 +23,6 @@
 **Status**: Completed  
 **Relevant Coursework**: Advanced Algorithms and Data Structures, Machine Learning and AI, Database Systems, Software Engineering, Computer Networks, Research Methods in Computer Science
 
-### Software Developer
-**University of Missouri St. Louis** • St. Louis, MO • June 2025 – Sept 2025  
-**Status**: Completed  
-**Relevant Coursework**: Advanced Software Development, Cloud Computing, Database Systems, Web Development, Software Architecture, Project Management
-
 ### B.E. in Computer Engineering
 **University of Mumbai** • Mumbai, India • 2016 – 2019  
 **Status**: Completed  

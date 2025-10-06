@@ -20,6 +20,21 @@ function Education() {
       ]
     },
     {
+      degree: "Software Developer",
+      university: "University of Missouri St. Louis",
+      duration: "June 2025 – Sept 2025",
+      location: "St. Louis, MO",
+      status: "Completed",
+      courses: [
+        "Advanced Software Development",
+        "Cloud Computing",
+        "Database Systems",
+        "Web Development",
+        "Software Architecture",
+        "Project Management"
+      ]
+    },
+    {
       degree: "B.E. in Computer Engineering",
       university: "University of Mumbai",
       duration: "2016 – 2019",

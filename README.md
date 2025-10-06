@@ -165,7 +165,7 @@
 ## 🤝 Leadership & Involvement
 
 ### International Ambassador
-**Saint Louis University** • Global Grad at Saint Louis University • Jan. 2023 – Present
+**Saint Louis University** • Global Grad at Saint Louis University • Jan. 2023 – Jan. 2024
 * Help organize events and maintain relations with international students
 * Provide assistance related to university resources and cultural integration
 * Participated in various events and coordinated multiple activities

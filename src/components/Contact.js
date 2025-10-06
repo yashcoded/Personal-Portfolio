@@ -22,15 +22,15 @@ function Contact() {
     },
     {
       type: "GitHub",
-      value: "whywasyashtaken",
-      url: "https://github.com/whywasyashtaken",
+      value: "yashcoded",
+      url: "https://github.com/yashcoded",
       icon: FaGithub,
       description: "View my code repositories"
     },
     {
       type: "LinkedIn",
-      value: "whywasyashtaken",
-      url: "https://www.linkedin.com/in/whywasyashtaken/",
+      value: "yashcoded",
+      url: "https://www.linkedin.com/in/yashcoded/",
       icon: FaLinkedin,
       description: "Connect professionally"
     },
@@ -43,8 +43,8 @@ function Contact() {
     },
     {
       type: "X",
-      value: "whywasyashtaken",
-      url: "https://x.com/whywasyashtaken",
+      value: "yashcoded",
+      url: "https://x.com/yashcoded",
       icon: FaXTwitter,
       description: "Follow my updates"
     }

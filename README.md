@@ -31,28 +31,24 @@
 ## 🛠️ Technical Skills
 
 ### Programming Languages
-**Proficient**: JavaScript, TypeScript, Python, Java, C/C++, HTML5, CSS3  
-**Familiar**: SQL, Bash, PowerShell
+**Expert**: JavaScript, HTML, CSS  
+**Advanced**: Python, Java, SQL  
+**Intermediate**: C/C++
 
 ### Frameworks & Libraries
-**Frontend**: React.js, Next.js, Redux, Framer Motion, React Router  
-**Backend**: Node.js, Express.js, Spring Boot, RESTful APIs  
-**Mobile**: React Native, Progressive Web Apps (PWA)
-
-### Cloud & DevOps
-**Cloud Platforms**: AWS (DynamoDB, S3, EC2), Google Cloud Platform, Netlify  
-**DevOps**: Docker, CI/CD Pipelines, Git, GitHub Actions  
-**Databases**: PostgreSQL, MongoDB, DynamoDB
-
-### Development Tools
-**IDEs**: Visual Studio Code, Android Studio, IntelliJ IDEA  
-**Version Control**: Git, GitHub, GitLab  
-**Testing**: Jest, React Testing Library, TDD  
-**Other**: Nmap, Wireshark, Postman, Figma
+**Expert**: React.js  
+**Advanced**: Node.js, MongoDB, PostgreSQL  
+**Intermediate**: Spring Boot
 
 ### Operating Systems
-**Primary**: macOS, Ubuntu, Windows  
-**Familiar**: Kali Linux, Android
+**Expert**: Windows  
+**Advanced**: Linux, Ubuntu, macOS  
+**Intermediate**: Kali Linux, Android
+
+### Development Tools
+**Expert**: VS Code  
+**Advanced**: Android Studio, Anaconda  
+**Intermediate**: Visual Studio, Sublime Text, Nmap, Wireshark
 
 ## 💼 Professional Experience
 

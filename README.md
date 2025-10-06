@@ -114,18 +114,18 @@
 * Research combining computer vision and NLP techniques for enhanced object detection
 * Published in peer-reviewed journal with significant impact on AI/ML community
 
+### Predict Unknown Properties of Elements of Periodic Table with Machine Learning
+**IJMN** • 2023  
+**Publication**: [View Publication](https://example.com/periodic-table-ml)
+* Applied machine learning algorithms to predict chemical properties
+* Demonstrated significant accuracy improvements in property prediction models
+
 ### Semantic Web Search Engine
 **IJSR** • 2019  
 **Publication**: [View Publication](https://example.com/semantic-web-search)
 * Developed a search engine providing information based on keywords using semantic web technologies
 * Used DBpedia and SPARQL Query to search data based on keywords
 * Improved accuracy of search results by 30% and response time by 15% compared to existing systems
-
-### Predict Unknown Properties of Elements of Periodic Table with Machine Learning
-**IJMN** • 2023  
-**Publication**: [View Publication](https://example.com/periodic-table-ml)
-* Applied machine learning algorithms to predict chemical properties
-* Demonstrated significant accuracy improvements in property prediction models
 
 ## 🎓 Coursework
 

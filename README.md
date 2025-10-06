@@ -57,16 +57,16 @@
 ## 💼 Professional Experience
 
 ### Software Developer
-**University of Missouri St. Louis** • St. Louis, MO • Jun. 2025 – Present
-* Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors
-* Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime
-* Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations
-
-### Software Developer
 **Saint Louis University** • St. Louis, MO • Feb. 2023 – Present
 * Created 3 tools for 8 developers, improving workflow efficiency 25%
 * Coordinated Agile sprints with 6 teammates, managing 10+ Jira tasks per sprint
 * Onboarded and mentored 5 juniors; presented design updates to stakeholders, contributing to 2M USD MVP launch
+
+### Software Developer
+**University of Missouri St. Louis** • St. Louis, MO • Jun. 2025 – Sept. 2025
+* Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors
+* Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime
+* Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations
 
 ### Senior Engineer
 **Eezee Business Machines** • Mumbai, Maharashtra, India • Jan. 2021 – Jul. 2022

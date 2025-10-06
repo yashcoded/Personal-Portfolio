@@ -58,6 +58,7 @@
   align-items: center;
   margin-bottom: 0.5rem;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .roleTitle {

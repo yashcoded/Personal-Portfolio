@@ -235,7 +235,9 @@ const Home = () => {
               variants={sectionVariants}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
+              className={styles.sectionContainer}
             >
+              <h2 className={styles.sectionHeader}>Leadership & Involvement</h2>
               <Participation />
             </motion.div>
           )}

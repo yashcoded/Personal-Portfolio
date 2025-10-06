@@ -30,7 +30,6 @@ function Participation() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className={styles.title}>Leadership & Involvement</h1>
         {participations.map((participation, index) => (
           <motion.div
             key={index}

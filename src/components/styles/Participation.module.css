@@ -14,15 +14,6 @@
   width: 100%;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #e50914;
-  text-align: center;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
-}
-
 .participationCard {
   background: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(20px);

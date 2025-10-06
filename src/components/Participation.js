@@ -22,14 +22,14 @@ function Participation() {
   ];
 
   return (
-    <motion.div
-      className={styles.participationContainer}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className={styles.participationContent}>
+    <div className={styles.participationWrapper}>
+      <motion.div
+        className={styles.participationContainer}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h1 className={styles.title}>Leadership & Involvement</h1>
         {participations.map((participation, index) => (
           <motion.div
@@ -40,28 +40,31 @@ function Participation() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <div className={styles.cardHeader}>
-              <div className={styles.roleTitle}>
-                <h2>{participation.title}</h2>
+              <div className={styles.roleHeader}>
+                <h2 className={styles.roleTitle}>{participation.title}</h2>
                 <span className={`${styles.status} ${styles[participation.status.toLowerCase()]}`}>
                   {participation.status}
                 </span>
               </div>
               <h3 className={styles.organization}>{participation.organization}</h3>
               <p className={styles.description}>{participation.description}</p>
-              <div className={styles.metaInfo}>
+              <div className={styles.roleInfo}>
                 <span className={styles.duration}>{participation.duration}</span>
                 <span className={styles.location}>{participation.location}</span>
               </div>
             </div>
-            <ul className={styles.achievements}>
-              {participation.achievements.map((achievement, achIndex) => (
-                <li key={achIndex}>{achievement}</li>
-              ))}
-            </ul>
+            <div className={styles.achievementsSection}>
+              <h4 className={styles.achievementsTitle}>Key Achievements</h4>
+              <ul className={styles.achievements}>
+                {participation.achievements.map((achievement, achIndex) => (
+                  <li key={achIndex} className={styles.achievementItem}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         ))}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 

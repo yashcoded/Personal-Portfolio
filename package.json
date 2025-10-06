@@ -2,7 +2,7 @@
   "name": "yash-bhatia-portfolio",
   "version": "1.0.0",
   "description": "Yash Bhatia - Full-Stack Developer Portfolio Website",
-  "homepage": "https://yashcoded.github.io/Personal-Portfolio/",
+  "homepage": "https://yashcoded.com",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

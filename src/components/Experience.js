@@ -8,18 +8,6 @@ function Experience() {
   const experiences = [
     {
       title: "Software Developer",
-      company: "University of Missouri St. Louis",
-      duration: "Jun. 2025 – Present",
-      location: "St. Louis, MO",
-      achievements: [
-        "Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors",
-        "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime",
-        "Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations"
-      ],
-      status: "Current"
-    },
-    {
-      title: "Software Developer",
       company: "Saint Louis University",
       duration: "Feb. 2023 – Present",
       location: "St. Louis, MO",
@@ -29,6 +17,30 @@ function Experience() {
         "Onboarded and mentored 5 juniors; presented design updates to stakeholders, contributing to 2M USD MVP launch"
       ],
       status: "Current"
+    },
+    {
+      title: "Software Developer",
+      company: "University of Missouri St. Louis",
+      duration: "Jun. 2025 – Sept. 2025",
+      location: "St. Louis, MO",
+      achievements: [
+        "Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors",
+        "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime",
+        "Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations"
+      ],
+      status: "Completed"
+    },
+    {
+      title: "International Ambassador",
+      company: "Saint Louis University",
+      duration: "Jan. 2023 – Jan. 2024",
+      location: "St. Louis, MO",
+      achievements: [
+        "Helped organize events and maintain relations with international students",
+        "Provided assistance related to university resources and cultural integration",
+        "Participated in various events and coordinated multiple activities"
+      ],
+      status: "Completed"
     },
     {
       title: "Senior Engineer",

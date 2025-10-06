@@ -106,12 +106,6 @@
 * Implemented using React.js frontend and Java Spring Boot backend
 * Followed Scrum Principles with TDD approach for development
 
-### Semantic Web Search Engine
-**DBpedia, SPARQL** • Jan. 2019 – Jun. 2019
-* Developed a search engine providing information based on keywords using semantic web technologies
-* Used DBpedia and SPARQL Query to search data based on keywords
-* Improved accuracy of search results by 30% and response time by 15% compared to existing systems
-
 ## 📚 Research Publications
 
 ### Leveraging Computer Vision and Natural Language Processing for Object Detection and Localization
@@ -123,8 +117,9 @@
 ### Semantic Web Search Engine
 **IJSR** • 2019  
 **Publication**: [View Publication](https://example.com/semantic-web-search)
-* Developed advanced search engine using semantic web technologies
-* Improved search accuracy and response time through innovative query processing
+* Developed a search engine providing information based on keywords using semantic web technologies
+* Used DBpedia and SPARQL Query to search data based on keywords
+* Improved accuracy of search results by 30% and response time by 15% compared to existing systems
 
 ### Predict Unknown Properties of Elements of Periodic Table with Machine Learning
 **IJMN** • 2023  

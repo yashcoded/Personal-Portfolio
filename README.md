@@ -4,9 +4,9 @@
 Location: St. Louis, Missouri, United States  
 Email: [ybhatia@slu.edu](mailto:ybhatia@slu.edu)  
 Phone: +1 (314)- 814- 6036  
-LinkedIn: [yashbhatia238](https://www.linkedin.com/in/yashbhatia238/)  
-GitHub: [github.com/yashb196](https://github.com/yashb196)  
-Portfolio: [Yash Kamal Bhatia](https://yashb196.github.io/yashb196/)
+LinkedIn: [yashbhatia238](https://www.linkedin.com/in/yashcoded)  
+GitHub: [github.com/yashcoded](https://github.com/coded)  
+Portfolio: [Yash Kamal Bhatia](https://yashcoded.com)
 
 ## Education
 
@@ -89,7 +89,7 @@ Portfolio: [Yash Kamal Bhatia](https://yashb196.github.io/yashb196/)
 ## Involvement
 
 ### International Ambassidor
-**Saint Louis University** • Global Grad at Saint Louis University • January 2023 - Present
+**Saint Louis University** • Global Grad at Saint Louis University • January 2023 - June 2024
 * Help organize events and maintain relations with international students for any assistance related to university resources.
 * Participated in various events.
 * Coordinated various events.

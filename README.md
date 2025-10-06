@@ -9,7 +9,7 @@
 
 ## 📍 Contact Information
 **Location**: St. Louis, Missouri, United States  
-**Email**: [yashbhatiaslu@gmail.com](mailto:yashbhatiaslu@gmail.com)  
+**Email**: [ybhatia125@gmail.com](mailto:ybhatia125@gmail.com)  
 **Phone**: +1 (314) 814-6036  
 **LinkedIn**: [yashcoded](https://www.linkedin.com/in/yashcoded/)  
 **GitHub**: [yashcoded](https://github.com/yashcoded)  

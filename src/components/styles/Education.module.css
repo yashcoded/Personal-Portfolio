@@ -84,13 +84,14 @@
   font-weight: 600;
   color: #e50914;
   margin: 0 0 1rem 0;
-  text-align: left;
+  text-align: center;
 }
 
 .degreeInfo {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .duration, .location {

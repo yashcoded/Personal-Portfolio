@@ -59,7 +59,7 @@ const Home = () => {
       transition={{ duration: 1 }}
     >
       {/* Hero Section */}
-      <div className={styles.heroSection}>
+      <div id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
           <motion.div 
             className={styles.heroText}

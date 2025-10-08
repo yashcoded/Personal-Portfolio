@@ -28,8 +28,10 @@ import androidStudioIcon from './icons/android-studio-48.png';
 import visualStudioIcon from './icons/visual-studio.png';
 import anacondaIcon from './icons/anaconda-48.png';
 import sublimeIcon from './icons/sublime.png';
-import nextjsIcon from './icons/nextjs.png';
+import nextjsIcon from './icons/nextjs.svg';
 import expoIcon from './icons/expo.png';
+import awsIcon from './icons/aws.png';
+import cursorIcon from './icons/cursor.png';
 
 function Skills() {
   const skillCategories = [
@@ -73,12 +75,19 @@ function Skills() {
       title: "Development Tools",
       skills: [
         { name: "VS Code", icon: vscodeIcon, level: "Expert" },
+        { name: "Cursor", icon: cursorIcon, level: "Expert" },
         { name: "Android Studio", icon: androidStudioIcon, level: "Advanced" },
         { name: "Visual Studio", icon: visualStudioIcon, level: "Intermediate" },
         { name: "Anaconda", icon: anacondaIcon, level: "Advanced" },
         { name: "Sublime Text", icon: sublimeIcon, level: "Intermediate" },
         { name: "Nmap", icon: nmapIcon, level: "Intermediate" },
         { name: "Wireshark", icon: wiresharkIcon, level: "Intermediate" }
+      ]
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: [
+        { name: "AWS", icon: awsIcon, level: "Advanced" }
       ]
     }
   ];

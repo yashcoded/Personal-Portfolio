@@ -30,8 +30,9 @@ function About() {
               <p className={styles.description}>
                 I believe in the power of continuous learning and staying curious. Whether it's exploring new frameworks, 
                 diving into research papers, or experimenting with emerging technologies, I'm always looking for ways to grow 
-                and improve. Currently, I'm deepening my expertise in Blockchain technologies and Cloud DevOps practices, 
-                staying ahead of industry trends. This mindset has helped me adapt quickly to new challenges and deliver innovative solutions.
+                and improve. Currently, I'm deepening my expertise in Blockchain technologies, Cloud DevOps practices, and 
+                Large Language Models (LLMs), staying ahead of industry trends. This mindset has helped me adapt quickly to 
+                new challenges and deliver innovative solutions.
               </p>
               <p className={styles.description}>
                 When I'm not coding, you'll find me gaming, creating content, or exploring new technologies. I'm passionate 

@@ -13,9 +13,10 @@ function Participation() {
       location: "St. Louis, MO",
       description: "Global Grad at Saint Louis University",
       achievements: [
-        "Helped organize events and maintain relations with international students",
-        "Provided assistance related to university resources and cultural integration",
-        "Participated in various events and coordinated multiple activities"
+        "Delivered presentations and facilitated workshops for 200+ international students, showcasing strong communication and public speaking abilities",
+        "Coordinated cross-cultural events and maintained relationships with diverse student groups, demonstrating excellent interpersonal and organizational skills",
+        "Provided expert guidance on university resources and cultural integration, effectively translating complex information for international audiences",
+        "Represented the university in official capacities, presenting institutional initiatives and fostering community engagement"
       ],
       status: "Completed"
     }

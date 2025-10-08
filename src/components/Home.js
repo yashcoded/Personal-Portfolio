@@ -83,10 +83,10 @@ const Home = () => {
               className={styles.heroDescription}
               variants={itemVariants}
             >
-              Passionate Full-Stack Developer specializing in React.js, Node.js, and cloud technologies. 
-              Currently building scalable web applications at University of Missouri St. Louis, 
-              with a proven track record of delivering solutions that serve thousands of users. 
-              M.Sc. in Computer Science with expertise in modern web development and emerging technologies.
+              Results-driven Full-Stack Developer with M.Sc. in Computer Science, specializing in React.js, Node.js, and cloud technologies. 
+              Currently architecting scalable web solutions at University of Missouri St. Louis, serving 3,000+ monthly users. 
+              Proven expertise in leading cross-functional teams, delivering enterprise applications, and presenting technical solutions to stakeholders. 
+              Passionate about leveraging cutting-edge technologies to drive innovation and business value.
             </motion.p>
             <motion.div 
               className={styles.heroButtons}

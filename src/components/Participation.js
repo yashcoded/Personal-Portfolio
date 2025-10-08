@@ -26,7 +26,7 @@ function Participation() {
       organization: "YouTube (bhatiagamingtm)",
       duration: "2018 – Present",
       location: "Digital Platform",
-      description: "Gaming content creator and live streamer",
+      description: "Gaming content creator, live streamer, and occasional vlogger (when I remember to leave the house)",
       achievements: [
         "Created and presented content demonstrating strong verbal communication and explanation skills to diverse audiences",
         "Developed ability to break down complex gaming strategies and concepts into easily digestible content for viewers",

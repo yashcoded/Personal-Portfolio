@@ -436,7 +436,8 @@
   }
   
   .sectionContainer {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    margin-bottom: 3rem;
   }
   
   .description {
@@ -445,7 +446,7 @@
   
   .sectionHeader {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   
   .sectionContent {

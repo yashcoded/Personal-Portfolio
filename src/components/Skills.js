@@ -32,6 +32,8 @@ import nextjsIcon from './icons/nextjs.svg';
 import expoIcon from './icons/expo.png';
 import awsIcon from './icons/aws.png';
 import cursorIcon from './icons/cursor.png';
+import firebaseIcon from './icons/firebase.png';
+import gcpIcon from './icons/gcp.png';
 
 function Skills() {
   const skillCategories = [
@@ -87,7 +89,9 @@ function Skills() {
     {
       title: "Cloud & DevOps",
       skills: [
-        { name: "AWS", icon: awsIcon, level: "Advanced" }
+        { name: "AWS", icon: awsIcon, level: "Advanced" },
+        { name: "Google Cloud Platform", icon: gcpIcon, level: "Advanced" },
+        { name: "Firebase", icon: firebaseIcon, level: "Advanced" }
       ]
     }
   ];

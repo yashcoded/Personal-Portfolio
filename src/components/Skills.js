@@ -28,6 +28,8 @@ import androidStudioIcon from './icons/android-studio-48.png';
 import visualStudioIcon from './icons/visual-studio.png';
 import anacondaIcon from './icons/anaconda-48.png';
 import sublimeIcon from './icons/sublime.png';
+import nextjsIcon from './icons/nextjs.png';
+import expoIcon from './icons/expo.png';
 
 function Skills() {
   const skillCategories = [
@@ -47,9 +49,9 @@ function Skills() {
       title: "Frameworks & Libraries",
       skills: [
         { name: "React.js", icon: reactIcon, level: "Expert" },
-        { name: "Next.js", icon: reactIcon, level: "Advanced" },
+        { name: "Next.js", icon: nextjsIcon, level: "Advanced" },
         { name: "React Native", icon: reactIcon, level: "Advanced" },
-        { name: "Expo", icon: reactIcon, level: "Advanced" },
+        { name: "Expo", icon: expoIcon, level: "Advanced" },
         { name: "Node.js", icon: nodeIcon, level: "Advanced" },
         { name: "Spring Boot", icon: springBootIcon, level: "Intermediate" },
         { name: "MongoDB", icon: mongodbIcon, level: "Advanced" },

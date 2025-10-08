@@ -34,6 +34,8 @@ import awsIcon from './icons/aws.png';
 import cursorIcon from './icons/cursor.png';
 import firebaseIcon from './icons/firebase.png';
 import gcpIcon from './icons/gcp.png';
+import openaiIcon from './icons/openai.png';
+import claudeIcon from './icons/claude.png';
 
 function Skills() {
   const skillCategories = [
@@ -92,6 +94,13 @@ function Skills() {
         { name: "AWS", icon: awsIcon, level: "Advanced" },
         { name: "Google Cloud Platform", icon: gcpIcon, level: "Advanced" },
         { name: "Firebase", icon: firebaseIcon, level: "Advanced" }
+      ]
+    },
+    {
+      title: "AI & Machine Learning",
+      skills: [
+        { name: "OpenAI API", icon: openaiIcon, level: "Advanced" },
+        { name: "Claude AI", icon: claudeIcon, level: "Advanced" }
       ]
     }
   ];

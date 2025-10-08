@@ -5,7 +5,6 @@ import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,8 +18,7 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSetActive = (section) => {
-    setActiveSection(section);
+  const handleMenuClose = () => {
     if (menuActive) {
       setMenuActive(false);
     }
@@ -51,7 +49,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('home')}
+            onClick={handleMenuClose}
           >
             Home
           </ScrollLink>
@@ -63,7 +61,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('about')}
+            onClick={handleMenuClose}
           >
             About
           </ScrollLink>
@@ -75,7 +73,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('skills')}
+            onClick={handleMenuClose}
           >
             Skills
           </ScrollLink>
@@ -87,7 +85,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('experience')}
+            onClick={handleMenuClose}
           >
             Experience
           </ScrollLink>
@@ -99,7 +97,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('education')}
+            onClick={handleMenuClose}
           >
             Education
           </ScrollLink>
@@ -111,7 +109,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('projects')}
+            onClick={handleMenuClose}
           >
             Projects
           </ScrollLink>
@@ -123,7 +121,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('research')}
+            onClick={handleMenuClose}
           >
             Research
           </ScrollLink>
@@ -135,7 +133,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('participation')}
+            onClick={handleMenuClose}
           >
             Leadership
           </ScrollLink>
@@ -147,7 +145,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             spy={true}
-            onClick={() => handleSetActive('contact')}
+            onClick={handleMenuClose}
           >
             Contact
           </ScrollLink>

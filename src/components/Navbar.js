@@ -48,6 +48,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -60,6 +61,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -72,6 +74,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -84,6 +87,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -96,6 +100,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -108,6 +113,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -120,6 +126,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -132,6 +139,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >
@@ -144,6 +152,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
+            activeClass={styles.activeLink}
             spy={true}
             onClick={handleMenuClose}
           >

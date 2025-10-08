@@ -19,6 +19,20 @@ function Participation() {
         "Represented the university in official capacities, presenting institutional initiatives and fostering community engagement"
       ],
       status: "Completed"
+    },
+    {
+      title: "Content Creator & Technical Educator",
+      organization: "YouTube (bhatiagamingtm)",
+      duration: "2018 – Present",
+      location: "Digital Platform",
+      description: "Technology content creator specializing in gaming and technical tutorials",
+      achievements: [
+        "Created and presented technical content demonstrating strong verbal communication and explanation skills to diverse audiences",
+        "Developed ability to break down complex gaming strategies and technical concepts into easily digestible content",
+        "Built and maintained an engaged community through consistent content delivery and audience interaction",
+        "Honed public speaking and presentation skills through video content creation and live streaming sessions"
+      ],
+      status: "Active"
     }
   ];
 

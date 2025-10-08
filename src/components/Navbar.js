@@ -50,7 +50,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'home'}
+            spy={true}
             onClick={() => handleSetActive('home')}
           >
             Home
@@ -62,7 +62,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'about'}
+            spy={true}
             onClick={() => handleSetActive('about')}
           >
             About
@@ -74,7 +74,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'skills'}
+            spy={true}
             onClick={() => handleSetActive('skills')}
           >
             Skills
@@ -86,7 +86,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'experience'}
+            spy={true}
             onClick={() => handleSetActive('experience')}
           >
             Experience
@@ -98,7 +98,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'education'}
+            spy={true}
             onClick={() => handleSetActive('education')}
           >
             Education
@@ -110,7 +110,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'projects'}
+            spy={true}
             onClick={() => handleSetActive('projects')}
           >
             Projects
@@ -122,7 +122,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'research'}
+            spy={true}
             onClick={() => handleSetActive('research')}
           >
             Research
@@ -134,7 +134,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'participation'}
+            spy={true}
             onClick={() => handleSetActive('participation')}
           >
             Leadership
@@ -146,7 +146,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             className={styles.link}
-            active={activeSection === 'contact'}
+            spy={true}
             onClick={() => handleSetActive('contact')}
           >
             Contact

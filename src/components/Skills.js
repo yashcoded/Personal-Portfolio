@@ -28,7 +28,7 @@ import androidStudioIcon from './icons/android-studio-48.png';
 import visualStudioIcon from './icons/visual-studio.png';
 import anacondaIcon from './icons/anaconda-48.png';
 import sublimeIcon from './icons/sublime.png';
-import nextjsIcon from './icons/nextjs.svg';
+import nextjsIcon from './icons/nextjs.png';
 import expoIcon from './icons/expo.png';
 
 function Skills() {

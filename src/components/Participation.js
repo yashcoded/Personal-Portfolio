@@ -18,7 +18,8 @@ function Participation() {
         "Provided expert guidance on university resources and cultural integration, effectively translating complex information for international audiences",
         "Represented the university in official capacities, presenting institutional initiatives and fostering community engagement"
       ],
-      status: "Completed"
+      status: "Completed",
+      url: null
     },
     {
       title: "Content Creator & Streamer",
@@ -32,7 +33,8 @@ function Participation() {
         "Built and maintained an engaged community through consistent content delivery and audience interaction",
         "Honed public speaking and presentation skills through video content creation and live streaming sessions"
       ],
-      status: "Active"
+      status: "Active",
+      url: "https://www.youtube.com/@bhatiagamingtm"
     }
   ];
 
@@ -48,10 +50,12 @@ function Participation() {
         {participations.map((participation, index) => (
           <motion.div
             key={index}
-            className={styles.participationCard}
+            className={`${styles.participationCard} ${participation.url ? styles.clickableCard : ''}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
+            onClick={participation.url ? () => window.open(participation.url, '_blank') : undefined}
+            style={participation.url ? { cursor: 'pointer' } : {}}
           >
             <div className={styles.cardHeader}>
               <div className={styles.roleHeader}>

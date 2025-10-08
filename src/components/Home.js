@@ -84,8 +84,8 @@ const Home = () => {
               variants={itemVariants}
             >
               Results-driven Full-Stack Developer with M.Sc. in Computer Science, specializing in React.js, Node.js, and cloud technologies. 
-              Currently architecting scalable web solutions at University of Missouri St. Louis, serving 3,000+ monthly users. 
-              Proven expertise in leading cross-functional teams, delivering enterprise applications, and presenting technical solutions to stakeholders. 
+              Currently architecting scalable web solutions at Saint Louis University, leading cross-functional teams to deliver enterprise applications. 
+              Proven track record of building solutions serving 3,000+ users, presenting technical strategies to stakeholders, and contributing to a $2M MVP launch. 
               Passionate about leveraging cutting-edge technologies to drive innovation and business value.
             </motion.p>
             <motion.div 

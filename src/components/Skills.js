@@ -47,6 +47,9 @@ function Skills() {
       title: "Frameworks & Libraries",
       skills: [
         { name: "React.js", icon: reactIcon, level: "Expert" },
+        { name: "Next.js", icon: reactIcon, level: "Advanced" },
+        { name: "React Native", icon: reactIcon, level: "Advanced" },
+        { name: "Expo", icon: reactIcon, level: "Advanced" },
         { name: "Node.js", icon: nodeIcon, level: "Advanced" },
         { name: "Spring Boot", icon: springBootIcon, level: "Intermediate" },
         { name: "MongoDB", icon: mongodbIcon, level: "Advanced" },

@@ -38,11 +38,9 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  height: fit-content;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-height: 400px;
 }
 
 .experienceCard::before {

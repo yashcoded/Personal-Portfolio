@@ -44,11 +44,9 @@
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: fit-content;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-height: 500px;
 }
 
 .clickableCard {

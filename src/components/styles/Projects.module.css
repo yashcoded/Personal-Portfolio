@@ -31,11 +31,9 @@
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: fit-content;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-height: 400px;
 }
 
 .clickableCard {
@@ -185,7 +183,7 @@
   }
   
   .card {
-    min-height: 380px;
+    min-height: 400px;
   }
 }
 
@@ -198,7 +196,7 @@
   }
   
   .card {
-    min-height: 350px;
+    min-height: 400px;
     padding: 1.5rem;
   }
   
@@ -246,7 +244,7 @@
   }
   
   .card {
-    min-height: 320px;
+    min-height: 400px;
     padding: 1.25rem;
   }
   
@@ -279,7 +277,7 @@
   
   .card {
     padding: 1.25rem;
-    min-height: 320px;
+    min-height: 400px;
   }
   
   .cardTitle {
@@ -337,7 +335,7 @@
   
   .card {
     padding: 1rem;
-    min-height: 300px;
+    min-height: 400px;
   }
   
   .cardTitle {

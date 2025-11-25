@@ -93,7 +93,7 @@ const Home = () => {
               variants={itemVariants}
             >
               <a 
-                href="https://drive.google.com/file/d/1ynQCGEhmlS23kjA7mQGk2sqwon4P1Xdu/view?usp=share_link" 
+                href="https://drive.google.com/file/d/1RIb08dbHTMvMm8lwsb4aYg59K-dAn4ov/view?usp=share_link" 
                 className="btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -205,6 +205,7 @@ const Home = () => {
               variants={sectionVariants}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
+              className={styles.sectionContainer}
             >
               <h2 className={styles.sectionHeader}>Projects</h2>
               <Projects />
@@ -220,6 +221,8 @@ const Home = () => {
               variants={sectionVariants}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
+              className={styles.sectionContainer}
+              style={{ marginTop: '6rem' }}
             >
               <h2 className={styles.sectionHeader}>Research Publications</h2>
               <Research />

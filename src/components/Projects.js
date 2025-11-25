@@ -3,10 +3,26 @@
 import React from 'react';
 import styles from './styles/Projects.module.css';
 import { motion } from 'framer-motion';
-import { FaReact, FaDatabase, FaMobile } from 'react-icons/fa';
+import { FaReact, FaDatabase, FaMobile, FaMusic } from 'react-icons/fa';
 
 function Projects() {
   const projects = [
+    {
+      title: "Playlist Tracker",
+      place: "Personal Project",
+      duration: "November 2024 - Present",
+      description: [
+        "Built Progressive Web App (PWA) for bidirectional playlist transfer between YouTube, Spotify, Apple Music, and Amazon Music",
+        "Developed with Next.js 15 App Router, TypeScript, and Tailwind CSS for modern, responsive design",
+        "Implemented PWA features including offline support, installable app experience, and optimized performance",
+        "Designed secure architecture with no server-side data storage, ensuring user privacy and data protection"
+      ],
+      url: "https://github.com/yashcoded/playlist_tracker",
+      techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "PWA", "YouTube API", "Spotify API", "Apple Music API"],
+      icon: FaMusic,
+      status: "Active",
+      metrics: "Multi-platform playlist sync"
+    },
     {
       title: "Where's Religion",
       place: "Saint Louis University",

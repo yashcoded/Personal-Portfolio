@@ -55,6 +55,7 @@
     "@babel/plugin-syntax-flow": "^7.23.3",
     "@babel/plugin-transform-react-jsx": "^7.23.3",
     "@testing-library/dom": "^9.3.4",
+    "baseline-browser-mapping": "^2.8.31",
     "gh-pages": "^6.1.0",
     "typescript": "^5.3.3"
   },

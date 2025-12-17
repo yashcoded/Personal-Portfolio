@@ -36,6 +36,7 @@
 ehthumbs.db
 Thumbs.db
 node_modules/
+build/
 
 # Environment variables
 .env

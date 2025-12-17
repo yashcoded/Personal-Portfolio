@@ -90,7 +90,7 @@
 
 ### Crypto Tracker
 **React.js, Netlify, CoinGecko API** • Sep. 2023  
-**Live Demo**: [crypto-price-react-tracker.netlify.app](https://crypto-price-react-tracker.netlify.app)
+**Live Demo**: [crypto-price-react-tracker.netlify.app](https://btcvaluestracker.netlify.app)
 * Developed dashboard for top 100 assets with 60s updates for 500+ users
 * Explained optimization strategies to teammates; reduced load 25% using React hooks/lazy load
 

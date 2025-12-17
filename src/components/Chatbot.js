@@ -28,8 +28,23 @@ const Chatbot = () => {
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      // Small delay to ensure the input is rendered on mobile
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
     }
+    
+    // Prevent body scroll when chatbot is open on mobile
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   const handleSend = async () => {
@@ -69,6 +84,16 @@ const Chatbot = () => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSend();
+    }
+  };
+  
+  // Handle mobile keyboard events
+  const handleInputFocus = () => {
+    // On mobile, scroll to input when focused
+    if (window.innerWidth <= 768 && inputRef.current) {
+      setTimeout(() => {
+        inputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 300);
     }
   };
 
@@ -281,11 +306,12 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Chatbot Toggle Button */}
+      {/* Chatbot Toggle Button - Hide on mobile when chatbot is open */}
       <motion.div
-        className={styles.chatbotToggleContainer}
+        className={`${styles.chatbotToggleContainer} ${isOpen ? styles.hideOnMobile : ''}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        style={isOpen ? { zIndex: 1002 } : {}}
       >
         <AnimatePresence>
           {!isOpen && showPrompt && (
@@ -374,9 +400,14 @@ const Chatbot = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={handleKeyPress}
+                onFocus={handleInputFocus}
                 placeholder="Ask about Yash's experience, projects, or skills..."
                 disabled={isLoading}
                 aria-label="Chat input"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
               />
               <button
                 onClick={handleSend}

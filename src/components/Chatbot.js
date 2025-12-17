@@ -114,8 +114,6 @@ const Chatbot = () => {
       'home': 'home'
     };
 
-    let processedText = text;
-    const parts = [];
     let lastIndex = 0;
 
     // Create regex pattern for all section keywords

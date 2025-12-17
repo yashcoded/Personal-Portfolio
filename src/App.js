@@ -11,6 +11,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Research from './components/Research';
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
 import './components/styles/Slide.module.css'; // Import the CSS module
 import "./App.css"
 
@@ -53,6 +54,7 @@ function App() {
     <Router>
       <TitleUpdater />
       <Navbar />
+      <Chatbot />
       <Routes>
         <Route path="/Personal-Portfolio/" element={<Home />} />
         <Route path="/Personal-Portfolio" element={<Home />} />

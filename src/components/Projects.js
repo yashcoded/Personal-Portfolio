@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './styles/Projects.module.css';
 import { motion } from 'framer-motion';
-import { FaReact, FaDatabase, FaMobile, FaMusic } from 'react-icons/fa';
+import { FaReact, FaDatabase, FaMobile, FaMusic, FaGlobe } from 'react-icons/fa';
 
 function Projects() {
   const projects = [
@@ -57,14 +57,15 @@ function Projects() {
       place: "Personal Project",
       duration: "December 2023 - Present",
       description: [
-        "Built AI-powered travel companion for visa requirements and transit information",
-        "Integrated intelligent chatbot for personalized travel advice and follow-up questions",
-        "Developed comprehensive form system for route selection, layover details, and documentation guidance",
-        "Implemented real-time country search and validation with 227+ countries database"
+        "Built comprehensive AI-powered travel information platform for visa requirements and transit information",
+        "Integrated intelligent chatbot using OpenAI for personalized travel advice and real-time Q&A",
+        "Developed user-friendly form system for route selection, layover details, and documentation guidance",
+        "Implemented real-time country search and validation with 227+ countries database",
+        "Deployed on Vercel with optimized performance and responsive design for global travelers"
       ],
       url: "https://internationalinformation.vercel.app/",
-      techStack: ["Next.js", "React", "AI Integration", "Vercel", "Travel API"],
-      icon: FaMobile,
+      techStack: ["Next.js", "React", "OpenAI API", "AI Integration", "Vercel", "Travel API"],
+      icon: FaGlobe,
       status: "Active",
       metrics: "AI-powered travel assistance"
     },
@@ -77,7 +78,7 @@ function Projects() {
         "Explained optimization strategies to teammates; reduced load 25% using React hooks/lazy load",
         "Built with React.js, Netlify, and CoinGecko API integration"
       ],
-      url: "https://crypto-price-react-tracker.netlify.app",
+      url: "https://btcvalestracker.netlify.app",
       techStack: ["React.js", "Netlify", "CoinGecko API", "Performance Optimization"],
       icon: FaDatabase,
       status: "Completed",

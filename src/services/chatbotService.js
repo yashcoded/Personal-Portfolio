@@ -1,9 +1,8 @@
 // Chatbot Service for RAG API calls
-// SECURITY NOTE: OpenAI API key should be stored in backend API, not frontend
-// This service calls an external API endpoint (hosted separately on Vercel/Netlify)
+// SECURITY NOTE: OpenAI API key is stored securely in backend API, never in frontend
+// This service calls an external API endpoint (must be hosted separately - GitHub Pages cannot run backend code)
 
-const API_ENDPOINT = process.env.REACT_APP_CHATBOT_API_URL || 'https://your-api-endpoint.vercel.app/api/chat';
-const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY; // Only use if backend API unavailable
+const API_ENDPOINT = process.env.REACT_APP_CHATBOT_API_URL || 'https://your-api-endpoint.com/api/chat';
 
 // Knowledge base chunks for RAG - Enhanced with detailed resume content
 const knowledgeChunks = [
@@ -250,88 +249,17 @@ async function callBackendAPI(message, conversationHistory) {
   return data.response;
 }
 
-// Call OpenAI directly (fallback - NOT RECOMMENDED for production)
-async function callOpenAIDirectly(message, conversationHistory) {
-  if (!OPENAI_API_KEY) {
-    throw new Error('OpenAI API key not found. Please use backend API or set REACT_APP_CHATBOT_API_URL.');
-  }
-
-  // Retrieve relevant chunks using RAG
-  const relevantChunks = retrieveRelevantChunks(message, 3);
-  const context = relevantChunks.map(chunk => chunk.text).join('\n\n');
-
-  const systemPrompt = `You are a professional AI assistant helping answer questions about Yash Bhatia, a Software Development Engineer II specializing in Front-End and Client-Side Engineering.
-
-IMPORTANT GUIDELINES:
-- Use ONLY the provided context to answer questions accurately
-- Be specific and cite actual details from the resume (job titles, technologies, dates, achievements)
-- For semantic questions (e.g., "coding" = "development", "frontend" = "front-end/client-side"), understand the context and provide relevant information
-- Be concise but thorough - provide enough detail to be helpful
-- Use professional language and maintain a friendly tone
-- If information is not in the context, politely redirect: "I don't have that specific detail, but I can tell you about Yash's experience, projects, technical skills, or education."
-
-RESPONSE STYLE:
-- Use specific job titles: "Software Development Engineer (Front-End) / Team Lead" not just "developer"
-- Mention exact technologies: "TypeScript, React, Next.js, React Native" not just "web technologies"
-- Include relevant metrics: "3,000+ users", "1,000+ MAUs", "$2M MVP launch"
-- Reference specific companies and locations when relevant
-
-Keep responses under 250 words unless the user specifically asks for more detail.`;
-
-  const messages = [
-    { role: 'system', content: systemPrompt },
-    ...conversationHistory.slice(-4).map(msg => ({
-      role: msg.role === 'assistant' ? 'assistant' : 'user',
-      content: msg.content
-    })),
-    {
-      role: 'user',
-      content: `Context:\n${context}\n\nQuestion: ${message}\n\nAnswer based on the context above:`
-    }
-  ];
-
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`
-    },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: messages,
-      temperature: 0.7,
-      max_tokens: 300,
-    }),
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error?.message || 'OpenAI API error');
-  }
-
-  const data = await response.json();
-  return data.choices[0].message.content;
-}
+// Direct OpenAI API calls removed for security - API key must be stored in backend only
 
 export async function sendMessage(message, conversationHistory = []) {
   try {
-    // Debug: Check if env variables are loaded
-    console.log('API_ENDPOINT:', API_ENDPOINT ? 'Set' : 'Not set');
-    console.log('OPENAI_API_KEY:', OPENAI_API_KEY ? 'Set (length: ' + OPENAI_API_KEY.length + ')' : 'Not set');
-    
-    // Try backend API first (preferred)
-    if (API_ENDPOINT && !API_ENDPOINT.includes('your-api-endpoint')) {
-      return await callBackendAPI(message, conversationHistory);
+    // Check if backend API endpoint is configured
+    if (!API_ENDPOINT || API_ENDPOINT.includes('your-api-endpoint')) {
+      throw new Error('Backend API endpoint not configured. Please set REACT_APP_CHATBOT_API_URL in your environment variables. The API key must be stored securely in the backend, not in the frontend.');
     }
     
-    // Fallback to direct OpenAI API (if backend unavailable)
-    if (OPENAI_API_KEY) {
-      console.warn('⚠️ Using OpenAI API directly from frontend. This exposes your API key. Use backend API for production!');
-      return await callOpenAIDirectly(message, conversationHistory);
-    }
-    
-    // If neither available, throw error
-    throw new Error('No API endpoint or OpenAI key configured. Please set REACT_APP_CHATBOT_API_URL or REACT_APP_OPENAI_API_KEY in .env and RESTART your dev server.');
+    // Only use backend API (secure method)
+    return await callBackendAPI(message, conversationHistory);
   } catch (error) {
     console.error('Error calling chatbot API:', error);
     throw error;

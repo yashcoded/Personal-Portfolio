@@ -1,5 +1,5 @@
-// Vercel Serverless Function for RAG Chatbot
-// This file should be deployed separately to Vercel/Netlify
+// Serverless Function for RAG Chatbot
+// Deployed to Vercel - OpenAI API key stored securely in Vercel environment variables
 
 import OpenAI from 'openai';
 
@@ -79,7 +79,8 @@ function retrieveRelevantChunks(query, topK = 3) {
 }
 
 export default async function handler(req, res) {
-  // Enable CORS for GitHub Pages
+  // Enable CORS for GitHub Pages and custom domains (GoDaddy)
+  // Using '*' allows requests from any origin (GitHub Pages, custom domains, etc.)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');

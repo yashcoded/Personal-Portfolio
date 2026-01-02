@@ -8,7 +8,6 @@
 **GitHub Pages**: [yashcoded.github.io/Personal-Portfolio](https://yashcoded.github.io/Personal-Portfolio)
 
 ## 📍 Contact Information
-**Location**: St. Louis, Missouri, United States  
 **Email**: [ybhatia125@gmail.com](mailto:ybhatia125@gmail.com)  
 **Phone**: +1 (314) 814-6036  
 **LinkedIn**: [yashcoded](https://www.linkedin.com/in/yashcoded/)  
@@ -57,7 +56,7 @@
 ## 💼 Professional Experience
 
 ### Software Developer
-**Saint Louis University** • St. Louis, MO • Feb. 2023 – Present
+**Saint Louis University** • St. Louis, MO • Feb. 2023 – Dec 2025
 * Created 3 tools for 8 developers, improving workflow efficiency 25%
 * Coordinated Agile sprints with 6 teammates, managing 10+ Jira tasks per sprint
 * Onboarded and mentored 5 juniors; presented design updates to stakeholders, contributing to 2M USD MVP launch
@@ -82,7 +81,7 @@
 ## 🚀 Featured Projects
 
 ### Where's Religion
-**React Native, Next.js, AWS** • Feb. 2023 – Present  
+**React Native, Next.js, AWS** • Feb. 2023 – Dec. 2025 
 **Live Demo**: [wheresreligion.org](https://wheresreligion.org)
 * Launched app for religious landmark search, reaching 1,000+ MAUs
 * Presented product updates to user groups; deployed on wheresreligion.org, handling 1k+ monthly requests

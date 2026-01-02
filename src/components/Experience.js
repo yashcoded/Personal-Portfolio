@@ -9,7 +9,7 @@ function Experience() {
     {
       title: "Software Developer",
       company: "Saint Louis University",
-      duration: "Feb. 2023 – Present",
+      duration: "Feb. 2023 – Dec. 2025",
       location: "St. Louis, MO",
       achievements: [
         "Created 3 tools for 8 developers, improving workflow efficiency 25%",

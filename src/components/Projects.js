@@ -10,7 +10,7 @@ function Projects() {
     {
       title: "Playlist Tracker",
       place: "Personal Project",
-      duration: "November 2024 - Present",
+      duration: "November 2024",
       description: [
         "Built Progressive Web App (PWA) for bidirectional playlist transfer between YouTube, Spotify, Apple Music, and Amazon Music",
         "Developed with Next.js 15 App Router, TypeScript, and Tailwind CSS for modern, responsive design",
@@ -26,7 +26,7 @@ function Projects() {
     {
       title: "Where's Religion",
       place: "Saint Louis University",
-      duration: "February 2023 - Present",
+      duration: "February 2023 - December 2025",
       description: [
         "Launched app for religious landmark search, reaching 1,000+ MAUs",
         "Presented product updates to user groups; deployed on wheresreligion.org, handling 1k+ monthly requests",
@@ -41,7 +41,7 @@ function Projects() {
     {
       title: "Museum Web Platform",
       place: "University of Missouri St. Louis",
-      duration: "June 2025 - Present",
+      duration: "June 2025 - September 2025",
       description: [
         "Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors",
         "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime",
@@ -55,7 +55,7 @@ function Projects() {
     {
       title: "International Travel Information",
       place: "Personal Project",
-      duration: "December 2023 - Present",
+      duration: "December 2023",
       description: [
         "Built comprehensive AI-powered travel information platform for visa requirements and transit information",
         "Integrated intelligent chatbot using OpenAI for personalized travel advice and real-time Q&A",

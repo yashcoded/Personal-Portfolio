@@ -128,6 +128,23 @@ const LandingPage = () => {
           </div>
         </div>
 
+        {/* Research Paper 2 (2024) */}
+        <div className={styles.timelineItem}>
+          <div className={styles.timelineLeft}>
+            <div className={styles.timelineIcon}>
+              <FaBook size={24} color="#0055a5" />
+            </div>
+            <span className={styles.timelineYear}>2024</span>
+          </div>
+          <div className={styles.timelineContent}>
+            <div className={styles.itemTitle}>OPAST Publication</div>
+            <div className={styles.itemDescription}>
+              Published "Predict Unknown Properties of Elements with Machine Learning". 
+              Developed ML models to predict chemical element properties with high accuracy.
+            </div>
+          </div>
+        </div>
+
         {/* Education (2024) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>

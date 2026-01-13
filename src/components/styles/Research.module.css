@@ -6,12 +6,6 @@
   margin: 0;
   max-width: 1400px;
   width: 100%;
-  z-index: 2;
-}
-
-.researchContent {
-  max-width: 1400px;
-  width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -28,11 +22,14 @@
   background-clip: text;
 }
 
-.researchGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 2rem;
+.researchContent {
   width: 100%;
+}
+
+.researchGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .paperCard {
@@ -118,6 +115,28 @@
   color: #e50914;
 }
 
+.status {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
+}
+
+.status.published {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--text-primary);
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .journalInfo {
   display: flex;
   gap: 1rem;
@@ -149,7 +168,7 @@
 .metricsText {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--netflix-red);
+  color: #e50914;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -209,7 +228,6 @@
   transform: scale(1.05);
 }
 
-
 @keyframes gradientShift {
   0%, 100% {
     background-position: 0% 50%;
@@ -227,12 +245,6 @@
 
   .title {
     font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .researchGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .paperCard {
@@ -262,37 +274,4 @@
     font-size: 0.75rem;
     padding: 0.25rem 0.6rem;
   }
-}
-
-/* Additional mobile optimizations */
-@media (max-width: 480px) {
-  .container {
-    padding: 0.5rem;
-  }
-
-  .paperCard {
-    padding: 1rem;
-  }
-
-  .paperTitle {
-    font-size: 1.2rem;
-  }
-
-  .paperDescription li {
-    font-size: 0.9rem;
-    padding-left: 1.2rem;
-  }
-
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .paperCard:hover {
-    transform: none;
-  }
-
-  .techTag:hover {
-    transform: none;
-  }
-
 }

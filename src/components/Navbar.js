@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { BsX } from 'react-icons/bs';
 import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
@@ -43,17 +44,13 @@ function Navbar() {
 
       <ul className={`${styles['nav-links']} ${menuActive ? styles.active : ''}`}>
         <li>
-        <ScrollLink
-            to="home"
-            smooth={true}
-            duration={500}
+          <Link
+            to="/"
             className={styles.link}
-            activeClass={styles.activeLink}
-            spy={true}
             onClick={handleMenuClose}
           >
             Home
-          </ScrollLink>
+          </Link>
         </li>
         <li>
           <ScrollLink

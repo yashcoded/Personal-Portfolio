@@ -7,49 +7,40 @@ import { motion } from 'framer-motion';
 function Experience() {
   const experiences = [
     {
-      title: "Software Developer",
-      company: "Saint Louis University",
-      duration: "Feb. 2023 – Dec. 2025",
+      title: "Technical Lead / Software Development Engineer (Full Stack)",
+      company: "Saint Louis University, $2M Research Initiative",
+      duration: "Feb 2023 – Dec 2025",
       location: "St. Louis, MO",
       achievements: [
-        "Created 3 tools for 8 developers, improving workflow efficiency 25%",
-        "Coordinated Agile sprints with 6 teammates, managing 10+ Jira tasks per sprint",
-        "Onboarded and mentored 5 juniors; presented design updates to stakeholders, contributing to 2M USD MVP launch"
-      ],
-      status: "Current"
-    },
-    {
-      title: "Software Developer",
-      company: "University of Missouri St. Louis",
-      duration: "Jun. 2025 – Sept. 2025",
-      location: "St. Louis, MO",
-      achievements: [
-        "Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors",
-        "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime",
-        "Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations"
+        "Owned end to end development of Where's Religion, a production web and mobile platform serving 2,000+ active users across iOS, Android, and web.",
+        "Led delivery across 5 parallel feature tracks by managing 15 developers, resolving blockers, cutting scope, and shipping MVP under fixed funding and timeline constraints.",
+        "Designed and shipped an LLM based content classification pipeline with prompt versioning and confidence thresholds, reducing manual moderation effort by approximately 70 percent.",
+        "Built scalable frontend and backend systems using TypeScript, React, Next.js, React Native (Expo), and Firebase supporting geospatial datasets and cross platform synchronization.",
+        "Owned production authentication, API integrations, caching strategies, and release stability across web and mobile clients."
       ],
       status: "Completed"
     },
     {
-      title: "Senior Engineer",
+      title: "Software Development Engineer (Full Stack)",
+      company: "University of Missouri, St. Louis",
+      duration: "May 2025 – Oct 2025",
+      location: "St. Louis, MO",
+      achievements: [
+        "Designed and implemented backend APIs using Node.js and Express including authentication, caching, and performance optimizations for production workloads.",
+        "Translated ambiguous product requirements into shippable features by coordinating frontend and backend integration points.",
+        "Worked within CI/CD pipelines to deliver reliable releases and debugged production issues affecting data flow and user experience."
+      ],
+      status: "Completed"
+    },
+    {
+      title: "Software Engineer",
       company: "Eezee Business Machines",
-      duration: "Jan. 2021 – Jul. 2022",
-      location: "Mumbai, Maharashtra, India",
+      duration: "Jan 2021 – Jul 2022",
+      location: "Mumbai, India",
       achievements: [
-        "Integrated 10+ hardware systems with cloud, boosting throughput 20%",
-        "Reduced downtime 15% by collaborating with support and operations teams",
-        "Improved release reliability from 30% to 75% via automation and guided 2 interns on QA practices"
-      ],
-      status: "Completed"
-    },
-    {
-      title: "Full Stack Engineer",
-      company: "Headstrait Exceptional Software",
-      duration: "Jun. 2019 – Dec 2019",
-      location: "Mumbai, Maharashtra, India",
-      achievements: [
-        "Engineered 5+ features with TDD, reducing bugs 30%",
-        "Implemented CI/CD pipelines, cutting deploy time from 1h to 10m; collaborated with QA team for smooth releases"
+        "Built client facing dashboards and API integrations for IoT platforms processing real time device data.",
+        "Defined and maintained API contracts consumed by multiple web and mobile client applications.",
+        "Supported production systems with monitoring, alerting, and CI pipelines to maintain uptime and reliability."
       ],
       status: "Completed"
     }

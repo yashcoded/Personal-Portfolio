@@ -117,6 +117,7 @@
   border-radius: 12px;
   display: inline-block;
   margin-top: 0.5rem;
+  margin-bottom: 1rem; /* Added gap */
 }
 
 .cardDescription {
@@ -148,7 +149,6 @@
   top: 0.1rem;
 }
 
-
 .techStack {
   display: flex;
   flex-wrap: wrap;
@@ -172,288 +172,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design - Enhanced Mobile Support */
-
-/* Large Tablets */
-@media (max-width: 1200px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  
-  .card {
-    min-height: 400px;
-  }
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  
-  .card {
-    min-height: 400px;
-    padding: 1.5rem;
-  }
-  
-  .cardTitle {
-    font-size: 1.3rem;
-    line-height: 1.2;
-  }
-  
-  .cardSubtitle {
-    font-size: 0.85rem;
-  }
-  
-  .cardDuration {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
-  }
-  
-  .cardDescription li {
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-  }
-  
-  .cardDescription li::before {
-    font-size: 0.7rem;
-  }
-  
-  .techStack {
-    gap: 0.4rem;
-    margin-top: 0.8rem;
-  }
-  
-  .techTag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-  }
-  
-}
-
-/* Mobile Landscape */
-@media (max-width: 768px) and (orientation: landscape) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0 0.75rem;
-  }
-  
-  .card {
-    min-height: 400px;
-    padding: 1.25rem;
-  }
-  
-  .cardTitle {
-    font-size: 1.2rem;
-  }
-  
-  .cardDescription li {
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .techStack {
-    gap: 0.3rem;
-  }
-  
-  .techTag {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-  }
-}
-
-/* Mobile Portrait */
-@media (max-width: 480px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 0 0.75rem;
-  }
-  
-  .card {
-    padding: 1.25rem;
-    min-height: 400px;
-  }
-  
-  .cardTitle {
-    font-size: 1.2rem;
-    line-height: 1.3;
-    margin-bottom: 0.4rem;
-  }
-  
-  .cardSubtitle {
-    font-size: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .cardDuration {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.5rem;
-    margin-top: 0.4rem;
-  }
-  
-  .cardDescription {
-    margin-bottom: 1.25rem;
-  }
-  
-  .cardDescription li {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 0.6rem;
-    padding-left: 1.25rem;
-  }
-  
-  .cardDescription li::before {
-    font-size: 0.65rem;
-    top: 0.05rem;
-  }
-  
-  .techStack {
-    gap: 0.3rem;
-    margin-top: 0.75rem;
-  }
-  
-  .techTag {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 8px;
-  }
-  
-}
-
-/* Small Mobile Devices */
-@media (max-width: 360px) {
-  .container {
-    padding: 0 0.5rem;
-    gap: 1rem;
-  }
-  
-  .card {
-    padding: 1rem;
-    min-height: 400px;
-  }
-  
-  .cardTitle {
-    font-size: 1.1rem;
-  }
-  
-  .cardSubtitle {
-    font-size: 0.75rem;
-  }
-  
-  .cardDuration {
-    font-size: 0.65rem;
-    padding: 0.1rem 0.4rem;
-  }
-  
-  .cardDescription li {
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-  }
-  
-  .cardDescription li::before {
-    font-size: 0.6rem;
-  }
-  
-  .techStack {
-    gap: 0.25rem;
-  }
-  
-  .techTag {
-    font-size: 0.6rem;
-    padding: 0.1rem 0.4rem;
-  }
-  
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .card:hover {
-    transform: none;
-  }
-  
-  .card:active {
-    transform: scale(0.98);
-  }
-  
-  .techTag:hover {
-    transform: none;
-  }
-  
-  .techTag:active {
-    transform: scale(0.95);
-  }
-  
-}
-
-/* High DPI Mobile Displays */
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
-  .card {
-    border-width: 0.5px;
-  }
-  
-  .techTag {
-    border-width: 0.5px;
-  }
-}
-
-/* Accessibility - Reduced Motion on Mobile */
-@media (prefers-reduced-motion: reduce) and (max-width: 768px) {
-  .card {
-    animation: none;
-  }
-  
-  .card:hover {
-    transform: none;
-  }
-  
-  .techTag:hover {
-    transform: none;
-  }
-  
-}
-
-/* Mobile-specific animations */
-@media (max-width: 768px) {
-  .card {
-    animation: slideInUp 0.4s ease-out;
-  }
-  
-  .card:nth-child(1) { animation-delay: 0.05s; }
-  .card:nth-child(2) { animation-delay: 0.1s; }
-  .card:nth-child(3) { animation-delay: 0.15s; }
-  .card:nth-child(4) { animation-delay: 0.2s; }
-  .card:nth-child(5) { animation-delay: 0.25s; }
-}
-
-/* Animation for card entrance */
-.card {
-  animation: slideInUp 0.6s ease-out;
-}
-
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
-.card:nth-child(5) { animation-delay: 0.5s; }
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Metrics styling */
 .cardMetrics {
   background: linear-gradient(135deg, rgba(229, 9, 20, 0.1), rgba(0, 212, 255, 0.1));
@@ -467,7 +185,27 @@
 .metricsText {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--netflix-red);
+  color: var(--netflix-red, #e50914);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Responsive Design - Enhanced Mobile Support */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
 }

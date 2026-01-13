@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Portfolio from './components/Portfolio'; // Renamed from Home
+import LandingPage from './components/LandingPage'; // New Landing Page
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
@@ -12,7 +13,7 @@ import Projects from './components/Projects';
 import Research from './components/Research';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
-import './components/styles/Slide.module.css'; // Import the CSS module
+import './components/styles/Slide.module.css';
 import "./App.css"
 
 // Component to handle dynamic title updates
@@ -22,8 +23,11 @@ function TitleUpdater() {
   useEffect(() => {
     const getPageTitle = (pathname) => {
       switch (pathname) {
+        case '/':
         case '/Personal-Portfolio/':
-          return 'Yash Bhatia - Full-Stack Developer Portfolio';
+          return 'Yash Bhatia - Portfolio';
+        case '/portfolio':
+          return 'Full Portfolio - Yash Bhatia';
         case '/Personal-Portfolio/about':
           return 'About - Yash Bhatia Portfolio';
         case '/Personal-Portfolio/skills':
@@ -49,16 +53,25 @@ function TitleUpdater() {
   return null;
 }
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/' || location.pathname === '/Personal-Portfolio/' || location.pathname === '/Personal-Portfolio';
+
   return (
-    <Router>
+    <>
       <TitleUpdater />
-      <Navbar />
+      {!isLandingPage && <Navbar />}
       <Chatbot />
       <Routes>
-        <Route path="/Personal-Portfolio/" element={<Home />} />
-        <Route path="/Personal-Portfolio" element={<Home />} />
-        <Route path="/" element={<Home />} />
+        {/* Landing Page Routes */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/Personal-Portfolio/" element={<LandingPage />} />
+        <Route path="/Personal-Portfolio" element={<LandingPage />} />
+
+        {/* Portfolio Page Route */}
+        <Route path="/portfolio" element={<Portfolio />} />
+
+        {/* Individual Sections (Optional deep links) */}
         <Route path="/Personal-Portfolio/about" element={<About />} />
         <Route path="/Personal-Portfolio/skills" element={<Skills />} />
         <Route path="/Personal-Portfolio/experience" element={<Experience />} />
@@ -67,6 +80,14 @@ function App() {
         <Route path="/Personal-Portfolio/research" element={<Research />} />
         <Route path="/Personal-Portfolio/contact" element={<Contact />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

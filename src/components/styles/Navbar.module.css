@@ -131,21 +131,6 @@
   background: rgba(229, 9, 20, 0.1);
 }
 
-.book-icon {
-  font-size: 24px;
-  transition: all 0.3s ease;
-  color: #ffffff;
-}
-
-.book-icon:hover {
-  transform: scale(1.1);
-  color: #e50914;
-}
-
-.book-icon svg {
-  fill: currentColor;
-}
-
 /* Mobile Navigation - Enhanced */
 @media screen and (max-width: 768px) {
   .navbar {
@@ -223,125 +208,9 @@
   }
 }
 
-/* Mobile Portrait */
-@media screen and (max-width: 480px) {
-  .navbar {
-    padding: 0 0.75rem;
-    height: 60px;
-  }
-  
-  .signature {
-    font-size: 18px;
-  }
-  
-  .navbar .nav-links {
-    top: 60px;
-    height: calc(100vh - 60px);
-    padding-top: 1.5rem;
-  }
-  
-  .navbar .nav-links li {
-    margin: 0.75rem 0;
-  }
-  
-  .navbar .nav-links a {
-    font-size: 16px;
-    padding: 10px 20px;
-    width: 180px;
-    min-height: 44px;
-  }
-  
-  .navbar .menu-icon {
-    font-size: 22px;
-    padding: 5px;
-  }
-}
-
-/* Small Mobile Devices */
-@media screen and (max-width: 360px) {
-  .navbar {
-    padding: 0 0.5rem;
-  }
-  
-  .signature {
-    font-size: 16px;
-  }
-  
-  .navbar .nav-links a {
-    font-size: 15px;
-    padding: 8px 16px;
-    width: 160px;
-    min-height: 42px;
-  }
-  
-  .navbar .menu-icon {
-    font-size: 20px;
-    padding: 4px;
-  }
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .navbar a:hover {
-    transform: none;
-  }
-  
-  .navbar a:active {
-    transform: scale(0.95);
-  }
-  
-  .menu-icon:hover {
-    transform: none;
-  }
-  
-  .menu-icon:active {
-    transform: scale(0.95);
-  }
-}
-
-/* High DPI Mobile Displays */
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
-  .navbar {
-    border-bottom-width: 0.5px;
-  }
-  
-  .navbar .nav-links {
-    border-top-width: 0.5px;
-  }
-}
-
-/* Accessibility - Reduced Motion on Mobile */
-@media (prefers-reduced-motion: reduce) and (max-width: 768px) {
-  .navbar .nav-links li {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-  
-  .navbar a:hover {
-    transform: none;
-  }
-  
-  .menu-icon:hover {
-    transform: none;
-  }
-}
-
 @keyframes slideInUp {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Tablet Navigation */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  .navbar .nav-links {
-    gap: 4px;
-  }
-  
-  .navbar a {
-    padding: 6px 12px;
-    font-size: 13px;
   }
 }

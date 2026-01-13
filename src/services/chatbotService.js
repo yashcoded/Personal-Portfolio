@@ -51,9 +51,14 @@ export function getFallbackResponse(query) {
     return "You can reach Yash at ybhatia125@gmail.com or call +1 (314) 814-6036. Connect on LinkedIn at linkedin.com/in/yashcoded, GitHub at github.com/yashcoded, or visit his website at yashcoded.com.";
   }
   
+  // Looking for / Seeking
+  if (lowerQuery.match(/\b(looking for|seeking|position|role|job|opportunity|open to)\b/)) {
+    return "Yash is currently looking for full-time opportunities as a Full Stack Engineer, Software Engineer, or Technical Lead. He specializes in React.js, Node.js, and cloud technologies, with experience leading teams and shipping production systems used by thousands.";
+  }
+
   // Current role / experience
   if (lowerQuery.match(/\b(current|now|present|currently|work|job|position|role|experience|career|employed)\b/)) {
-    return "Yash is a Software Developer at Saint Louis University (Feb 2023 - Present). He created 3 tools for 8 developers, improving workflow efficiency by 25%. He coordinates Agile sprints with 6 teammates, managing 10+ Jira tasks per sprint. He has onboarded and mentored 5 junior developers and presented design updates to stakeholders, contributing to a $2M USD MVP launch. He works on both front-end (TypeScript, React, Next.js, React Native) and back-end (Node.js, Express, REST APIs) development. Previously worked at UMSL (Jun-Sep 2025), Eezee Business Machines (2021-2022), and Headstrait Exceptional Software (2019).";
+    return "Yash was a Technical Lead / Software Development Engineer at Saint Louis University (Feb 2023 - Dec 2025). He led a team of 15 developers, shipped the 'Where's Religion' platform, and designed an LLM-based content classification pipeline. He also worked as a Software Development Engineer at UMSL (May 2025 - Oct 2025), focusing on backend APIs and CI/CD. Previously, he was a Software Engineer at Eezee Business Machines (2021-2022).";
   }
   
   // Projects / Portfolio
@@ -73,7 +78,7 @@ export function getFallbackResponse(query) {
   
   // Leadership / Team Lead
   if (lowerQuery.match(/\b(lead|leadership|team|manage|mentor|guide|senior|architect|architecture|design)\b/)) {
-    return "Yash serves as a Team Lead at Saint Louis University, where he mentors junior contributors, reviews pull requests, writes technical documentation, and participates in Agile Scrum ceremonies. He owns front-end architecture, component patterns, and state management for scalable UI systems. He leads cross-functional teams and collaborates with designers and front-end engineers.";
+    return "Yash served as a Technical Lead at Saint Louis University, where he managed 15 developers across 5 parallel tracks, resolved blockers, and shipped an MVP under fixed constraints. He mentored junior contributors, reviewed pull requests, and owned front-end architecture and release stability.";
   }
   
   // Front-end / Client-side specific
@@ -83,17 +88,17 @@ export function getFallbackResponse(query) {
   
   // Full stack / Backend
   if (lowerQuery.match(/\b(fullstack|full-stack|backend|back-end|server|api|rest|node|express)\b/)) {
-    return "Yash is a full-stack developer working on both front-end and back-end. He develops RESTful APIs using Node.js and Express, implements authentication and caching, and works with CI/CD pipelines. At UMSL (Jun-Sep 2025), he developed and documented RESTful APIs, implemented authentication, caching, and performance optimizations. He integrates client-side applications with REST APIs using documented API contracts and has experience with GraphQL (basic). He also uses SQL and database systems for back-end development.";
+    return "Yash is a full-stack developer working on both front-end and back-end. He develops RESTful APIs using Node.js and Express, implements authentication and caching, and works with CI/CD pipelines. At UMSL (May-Oct 2025), he designed backend APIs, implemented authentication and caching, and coordinated frontend-backend integration. He integrates client-side applications with REST APIs using documented API contracts and has experience with GraphQL (basic). He also uses SQL and database systems for back-end development.";
   }
   
   // Resume / CV
   if (lowerQuery.match(/\b(resume|cv|curriculum vitae|download)\b/)) {
-    return "You can download Yash's resume from the portfolio website. Look for the 'View Resume' or 'Download Resume' button. The resume contains detailed information about his experience as a Software Development Engineer II, projects, technical skills, and education.";
+    return "You can download Yash's resume from the portfolio website. Look for the 'View Resume' or 'Download Resume' button. The resume contains detailed information about his experience as a Technical Lead / Software Development Engineer, projects, technical skills, and education.";
   }
   
   // AI related
   if (lowerQuery.match(/\b(ai|artificial intelligence|chatgpt|openai|machine learning|ml)\b/)) {
-    return "Yash has extensive AI experience. In International Information Assistant, he uses ChatGPT API with custom prompts to determine transit visa requirements. In Where's Religion, he uses AI for automatically generating tags for user content. He has research publications in Computer Vision & NLP for object detection (2024) and Machine Learning for predicting periodic table properties (2024). Skills include OpenAI ChatGPT API, Claude AI, Computer Vision, NLP, Deep Learning, TensorFlow, and prompt engineering.";
+    return "Yash has extensive AI experience. At Saint Louis University, he designed and shipped an LLM-based content classification pipeline with prompt versioning, reducing manual moderation by 70%. In International Information Assistant, he uses ChatGPT API for visa requirements. He has research publications in Computer Vision & NLP for object detection (2024) and Machine Learning for predicting periodic table properties (2024). Skills include OpenAI ChatGPT API, Claude AI, Computer Vision, NLP, Deep Learning, TensorFlow, and prompt engineering.";
   }
   
   // Leadership / Ambassador
@@ -112,5 +117,5 @@ export function getFallbackResponse(query) {
   }
   
   // Default response
-  return "I'm Yash's AI assistant! I can help answer questions about his experience as a Full-Stack Software Developer (SLU, UMSL, Eezee, Headstrait), projects (International Information, Where's Religion, Playlist Tracker, Museum Platform), research publications (Computer Vision, ML for Chemistry, Semantic Web), leadership roles (International Ambassador, YouTube Creator), technical skills (React, Next.js, TypeScript, Node.js, AI/ML), education (M.Sc. CS, B.E. Computer Engineering), and contact information. What would you like to know?";
+  return "I'm Yash's AI assistant! Yash is a product-focused Full Stack Engineer who ships and owns production systems used by thousands. I can help answer questions about his experience as a Technical Lead / Software Developer (SLU, UMSL, Eezee), projects, research, and skills. What would you like to know?";
 }

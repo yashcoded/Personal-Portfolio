@@ -93,6 +93,8 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
 .contactCard:hover .cardIcon {
@@ -165,6 +167,7 @@
   text-align: center;
   min-height: 150px;
   justify-content: center;
+  text-decoration: none;
 }
 
 .socialCard::before {
@@ -195,6 +198,8 @@
   justify-content: center;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
 .socialCard:hover .socialIcon {
@@ -312,50 +317,5 @@
   
   .cardDescription {
     font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contactWrapper {
-    padding: 0.5rem;
-  }
-  
-  .sectionTitle {
-    font-size: 1.8rem;
-  }
-  
-  .contactCard {
-    padding: 1rem;
-    flex-direction: column;
-    text-align: center;
-    gap: 0.8rem;
-  }
-  
-  .socialGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .socialCard {
-    padding: 1rem;
-    min-height: 120px;
-  }
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .contactCard:hover {
-    transform: none;
-  }
-  
-  .socialCard:hover {
-    transform: none;
-  }
-  
-  .contactCard:active {
-    transform: scale(0.98);
-  }
-  
-  .socialCard:active {
-    transform: scale(0.98);
   }
 }

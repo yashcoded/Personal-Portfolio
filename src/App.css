@@ -1,5 +1,20 @@
 /* App.css - Netflix-inspired Portfolio */
 
+:root {
+  --netflix-red: #e50914;
+  --netflix-dark-red: #b81d13;
+  --netflix-black: #000000;
+  --netflix-dark-gray: #141414;
+  --netflix-gray: #333333;
+  --netflix-light-gray: #666666;
+  --netflix-white: #ffffff;
+  --netflix-text-gray: #b3b3b3;
+  --netflix-accent: #00d4ff;
+  --netflix-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
+  --netflix-card-bg: rgba(20, 20, 20, 0.8);
+  --netflix-hover-bg: rgba(255, 255, 255, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,62 +33,14 @@ body {
   overflow-x: hidden;
 }
 
-/* Netflix-inspired color palette */
-:root {
-  --netflix-red: #e50914;
-  --netflix-dark-red: #b81d13;
-  --netflix-black: #000000;
-  --netflix-dark-gray: #141414;
-  --netflix-gray: #333333;
-  --netflix-light-gray: #666666;
-  --netflix-white: #ffffff;
-  --netflix-text-gray: #b3b3b3;
-  --netflix-accent: #00d4ff;
-  --netflix-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
-  --netflix-card-bg: rgba(20, 20, 20, 0.8);
-  --netflix-hover-bg: rgba(255, 255, 255, 0.1);
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Netflix-style navbar */
-.navbar {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navbar a {
-  color: var(--netflix-white);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.navbar a:hover {
-  color: var(--netflix-red);
-  transform: translateY(-2px);
-}
-
-.navbar a.active {
-  color: var(--netflix-red);
-  font-weight: 600;
-}
-
-.navbar a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--netflix-red);
-  border-radius: 1px;
-}
+/* Netflix-style navbar (Global styles, overrides module for some parts if needed) */
+/* Note: Most navbar styles are in Navbar.module.css */
 
 /* Netflix-style cards */
 .page {
@@ -94,24 +61,10 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  min-height: 100vh;
-  background: var(--netflix-gradient);
+  /* min-height: 100vh; Removed to allow scrolling flow in Portfolio.js */
+  background: transparent; /* Let body gradient show */
   position: relative;
-  overflow: hidden;
-}
-
-.sectionContainer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(229, 9, 20, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-  pointer-events: none;
+  /* overflow: hidden; */
 }
 
 /* Typography */
@@ -119,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  color: var(--netflix-white);
 }
 
 h1 {
@@ -203,38 +157,7 @@ h2 {
   background: var(--netflix-dark-red);
 }
 
-/* Cross-browser compatibility */
-@supports not (backdrop-filter: blur(20px)) {
-  .navbar {
-    background: rgba(0, 0, 0, 0.9);
-  }
-  
-  .page {
-    background: rgba(20, 20, 20, 0.95);
-  }
-}
-
-/* Firefox specific fixes */
-@-moz-document url-prefix() {
-  .navbar {
-    background: rgba(0, 0, 0, 0.9);
-  }
-}
-
-/* Safari specific fixes */
-@supports (-webkit-backdrop-filter: blur(20px)) {
-  .navbar {
-    -webkit-backdrop-filter: blur(20px);
-  }
-  
-  .page {
-    -webkit-backdrop-filter: blur(20px);
-  }
-}
-
 /* Mobile-First Responsive Design */
-
-/* Base mobile styles */
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
@@ -244,216 +167,9 @@ h2 {
     padding: 20px 0;
   }
   
-  /* Improve touch targets on mobile */
   .btn {
     min-height: 44px;
     min-width: 44px;
     touch-action: manipulation;
-  }
-  
-  /* Better text scaling on mobile */
-  html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-  
-  /* Prevent zoom on input focus */
-  input, textarea, select {
-    font-size: 16px;
-  }
-  
-  /* Smooth scrolling on mobile */
-  html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Better tap highlighting */
-  * {
-    -webkit-tap-highlight-color: rgba(229, 9, 20, 0.2);
-  }
-  
-  /* Prevent horizontal scroll */
-  body {
-    overflow-x: hidden;
-  }
-  
-  /* Better button spacing */
-  .btn + .btn {
-    margin-top: 0.5rem;
-  }
-}
-
-/* Mobile landscape optimizations */
-@media (max-width: 768px) and (orientation: landscape) {
-  .sectionContainer {
-    padding: 10px 0;
-  }
-  
-  .container {
-    padding: 0 10px;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
-  
-  .sectionContainer {
-    padding: 15px 0;
-  }
-  
-  /* Smaller touch targets for very small screens */
-  .btn {
-    min-height: 40px;
-    min-width: 40px;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 360px) {
-  .container {
-    padding: 0 8px;
-  }
-  
-  .sectionContainer {
-    padding: 12px 0;
-  }
-  
-  .btn {
-    min-height: 38px;
-    min-width: 38px;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile performance optimizations */
-@media (max-width: 768px) {
-  /* Reduce animations on mobile for better performance */
-  .floatingElement {
-    animation-duration: 8s;
-  }
-  
-  /* Optimize transforms for mobile */
-  .card:hover {
-    transform: translateY(-4px) scale(1.01);
-  }
-  
-  .skillItem:hover {
-    transform: translateY(-2px) scale(1.02);
-  }
-}
-
-/* Mobile-specific utilities */
-@media (max-width: 768px) {
-  .mobile-hidden {
-    display: none !important;
-  }
-  
-  .mobile-only {
-    display: block !important;
-  }
-  
-  .mobile-text-center {
-    text-align: center !important;
-  }
-  
-  .mobile-full-width {
-    width: 100% !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none !important;
-  }
-  
-  .desktop-hidden {
-    display: none !important;
-  }
-}
-
-/* High DPI display optimizations */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .myPhoto {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}
-
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .floatingElement {
-    animation: none;
-  }
-  
-  .card::before {
-    animation: none;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --netflix-text-gray: #b3b3b3;
-    --netflix-white: #ffffff;
-  }
-}
-
-/* Animation utilities */
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slide-in-right {
-  animation: slideInRight 0.8s ease-out;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

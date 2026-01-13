@@ -87,7 +87,8 @@ const LandingPage = () => {
           <div className={styles.timelineContent}>
             <div className={styles.itemTitle}>Technical Lead / Software Development Engineer (Full Stack) @ SLU</div>
             <div className={styles.itemDescription}>
-              Owned end-to-end development of "Where's Religion", a platform serving 2,000+ active users. 
+              Owned end-to-end development of "Where's Religion", a production web and mobile platform serving 2,000+ active users across iOS, Android, and web. 
+              Built scalable systems using TypeScript, React, Next.js, React Native (Expo), and Firebase.
               Led delivery across 5 parallel feature tracks, managing 15 developers and shipping MVP. 
               Designed LLM-based content classification pipeline, reducing manual moderation by 70%.
             </div>

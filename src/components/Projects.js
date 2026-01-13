@@ -28,15 +28,16 @@ function Projects() {
       place: "Saint Louis University",
       duration: "February 2023 - December 2025",
       description: [
-        "Launched app for religious landmark search, reaching 1,000+ MAUs",
-        "Presented product updates to user groups; deployed on wheresreligion.org, handling 1k+ monthly requests",
-        "Integrated media delivery and maps for 500+ sites with a 3-member dev team"
+        "Owned end-to-end development of production web and mobile platform serving 2,000+ active users across iOS, Android, and web",
+        "Led delivery across 5 parallel feature tracks, managing 15 developers and shipping MVP under fixed constraints",
+        "Designed and shipped an LLM-based content classification pipeline, reducing manual moderation by 70%",
+        "Built scalable systems using TypeScript, React, Next.js, React Native (Expo), and Firebase"
       ],
       url: "https://wheresreligion.org",
-      techStack: ["React Native", "Next.js", "AWS", "Maps API", "Media Delivery"],
+      techStack: ["TypeScript", "React", "Next.js", "React Native", "Firebase", "AWS", "LLM"],
       icon: FaMobile,
       status: "Active",
-      metrics: "1,000+ MAUs"
+      metrics: "2,000+ active users"
     },
     {
       title: "Museum Web Platform",

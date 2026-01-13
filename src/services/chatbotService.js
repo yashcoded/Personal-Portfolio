@@ -58,7 +58,7 @@ export function getFallbackResponse(query) {
 
   // Current role / experience
   if (lowerQuery.match(/\b(current|now|present|currently|work|job|position|role|experience|career|employed)\b/)) {
-    return "Yash was a Technical Lead / Software Development Engineer at Saint Louis University (Feb 2023 - Dec 2025). He led a team of 15 developers, shipped the 'Where's Religion' platform, and designed an LLM-based content classification pipeline. He also worked as a Software Development Engineer at UMSL (May 2025 - Oct 2025), focusing on backend APIs and CI/CD. Previously, he was a Software Engineer at Eezee Business Machines (2021-2022) and a Full Stack Developer at Headstrait Exceptional Software (2019).";
+    return "Yash was a Technical Lead / Software Development Engineer at Saint Louis University (Feb 2023 - Dec 2025). He led a team of 15 developers, shipping the 'Where's Religion' platform to 2,000+ active users across web and mobile. He designed an LLM-based content classification pipeline and built scalable systems with TypeScript, React, Next.js, and Firebase. He also worked as a Software Development Engineer at UMSL (May 2025 - Oct 2025), focusing on backend APIs and CI/CD. Previously, he was a Software Engineer at Eezee Business Machines (2021-2022) and a Full Stack Developer at Headstrait Exceptional Software (2019).";
   }
   
   // Projects / Portfolio

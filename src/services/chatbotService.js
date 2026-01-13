@@ -58,7 +58,7 @@ export function getFallbackResponse(query) {
 
   // Current role / experience
   if (lowerQuery.match(/\b(current|now|present|currently|work|job|position|role|experience|career|employed)\b/)) {
-    return "Yash was a Technical Lead / Software Development Engineer at Saint Louis University (Feb 2023 - Dec 2025). He led a team of 15 developers, shipped the 'Where's Religion' platform, and designed an LLM-based content classification pipeline. He also worked as a Software Development Engineer at UMSL (May 2025 - Oct 2025), focusing on backend APIs and CI/CD. Previously, he was a Software Engineer at Eezee Business Machines (2021-2022).";
+    return "Yash was a Technical Lead / Software Development Engineer at Saint Louis University (Feb 2023 - Dec 2025). He led a team of 15 developers, shipped the 'Where's Religion' platform, and designed an LLM-based content classification pipeline. He also worked as a Software Development Engineer at UMSL (May 2025 - Oct 2025), focusing on backend APIs and CI/CD. Previously, he was a Software Engineer at Eezee Business Machines (2021-2022) and a Full Stack Developer at Headstrait Exceptional Software (2019).";
   }
   
   // Projects / Portfolio
@@ -113,9 +113,9 @@ export function getFallbackResponse(query) {
   
   // Headstrait / Earlier experience
   if (lowerQuery.match(/\b(headstrait|tdd|test driven|2019|early experience)\b/)) {
-    return "Yash worked as Full Stack Engineer at Headstrait Exceptional Software in Mumbai, India (Jun-Dec 2019). He engineered 5+ features using Test-Driven Development (TDD), reducing bugs by 30%. He implemented CI/CD pipelines, cutting deployment time from 1 hour to 10 minutes. He collaborated with QA teams and followed Scrum Principles for error-free software delivery.";
+    return "Yash worked as a Full Stack Developer at Headstrait Exceptional Software in Mumbai, India (Jun-Dec 2019). He implemented Test-Driven Development (TDD) on a cricket analytics platform using Jest and React. He utilized MongoDB for data storage and integrated data scraping pipelines to aggregate real-time information. He maintained code quality with SonarQube and managed workflows via Jira.";
   }
   
   // Default response
-  return "I'm Yash's AI assistant! Yash is a product-focused Full Stack Engineer who ships and owns production systems used by thousands. I can help answer questions about his experience as a Technical Lead / Software Developer (SLU, UMSL, Eezee), projects, research, and skills. What would you like to know?";
+  return "I'm Yash's AI assistant! Yash is a product-focused Full Stack Engineer who ships and owns production systems used by thousands. I can help answer questions about his experience as a Technical Lead / Software Developer (SLU, UMSL, Eezee, Headstrait), projects, research, and skills. What would you like to know?";
 }

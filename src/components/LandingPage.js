@@ -76,7 +76,7 @@ const LandingPage = () => {
 
       <div className={styles.timelineSection}>
         
-        {/* Work Experience - SLU */}
+        {/* Work Experience - SLU (2025) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>
@@ -94,7 +94,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Work Experience - UMSL */}
+        {/* Work Experience - UMSL (2025) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>
@@ -111,24 +111,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Work Experience - Eezee */}
-        <div className={styles.timelineItem}>
-          <div className={styles.timelineLeft}>
-            <div className={styles.timelineIcon}>
-              <FaBriefcase size={24} color="#0055a5" />
-            </div>
-            <span className={styles.timelineYear}>2022</span>
-          </div>
-          <div className={styles.timelineContent}>
-            <div className={styles.itemTitle}>Software Engineer @ Eezee Business Machines</div>
-            <div className={styles.itemDescription}>
-              Built client-facing dashboards and API integrations for IoT platforms. 
-              Defined API contracts and supported production systems with monitoring and CI pipelines.
-            </div>
-          </div>
-        </div>
-
-        {/* Research Paper 1 */}
+        {/* Research Paper 1 (2024) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>
@@ -145,7 +128,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Education */}
+        {/* Education (2024) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>
@@ -162,7 +145,42 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Research Paper 2 */}
+        {/* Work Experience - Eezee (2022) */}
+        <div className={styles.timelineItem}>
+          <div className={styles.timelineLeft}>
+            <div className={styles.timelineIcon}>
+              <FaBriefcase size={24} color="#0055a5" />
+            </div>
+            <span className={styles.timelineYear}>2022</span>
+          </div>
+          <div className={styles.timelineContent}>
+            <div className={styles.itemTitle}>Software Engineer @ Eezee Business Machines</div>
+            <div className={styles.itemDescription}>
+              Built client-facing dashboards and API integrations for IoT platforms. 
+              Defined API contracts and supported production systems with monitoring and CI pipelines.
+            </div>
+          </div>
+        </div>
+
+        {/* Work Experience - Headstrait (2019) */}
+        <div className={styles.timelineItem}>
+          <div className={styles.timelineLeft}>
+            <div className={styles.timelineIcon}>
+              <FaBriefcase size={24} color="#0055a5" />
+            </div>
+            <span className={styles.timelineYear}>2019</span>
+          </div>
+          <div className={styles.timelineContent}>
+            <div className={styles.itemTitle}>Full Stack Developer @ Headstrait Exceptional Software</div>
+            <div className={styles.itemDescription}>
+              Implemented Test-Driven Development (TDD) on a cricket analytics platform using Jest. 
+              Developed full-stack features using React and MongoDB, integrating data scraping pipelines. 
+              Maintained code quality using SonarQube and managed agile workflows via Jira.
+            </div>
+          </div>
+        </div>
+
+        {/* Research Paper 2 (2019) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>
@@ -179,7 +197,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Education 2 */}
+        {/* Education 2 (2019) */}
         <div className={styles.timelineItem}>
           <div className={styles.timelineLeft}>
             <div className={styles.timelineIcon}>

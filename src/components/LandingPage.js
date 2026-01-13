@@ -139,7 +139,7 @@ const LandingPage = () => {
           <div className={styles.timelineContent}>
             <div className={styles.itemTitle}>OPAST Publication</div>
             <div className={styles.itemDescription}>
-              Published "Predict Unknown Properties of Elements with Machine Learning". 
+              Published "<a href="https://www.opastpublishers.com/open-access-articles/predict-unknown-properties-of-elements-of-periodic-table-with-machine-learning.pdf" target="_blank" rel="noopener noreferrer">Predict Unknown Properties of Elements with Machine Learning</a>". 
               Developed ML models to predict chemical element properties with high accuracy.
             </div>
           </div>

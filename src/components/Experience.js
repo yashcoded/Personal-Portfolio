@@ -43,6 +43,18 @@ function Experience() {
         "Supported production systems with monitoring, alerting, and CI pipelines to maintain uptime and reliability."
       ],
       status: "Completed"
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Headstrait Exceptional Software",
+      duration: "Jun 2019 – Dec 2019",
+      location: "Mumbai, India",
+      achievements: [
+        "Implemented Test-Driven Development (TDD) methodologies on a cricket analytics platform, utilizing Jest for unit testing to ensure code reliability.",
+        "Developed full-stack features using React and MongoDB, integrating data scraping pipelines to aggregate and display real-time information.",
+        "Maintained code quality using SonarQube and managed agile workflows via Jira, ensuring efficient delivery of software modules."
+      ],
+      status: "Completed"
     }
   ];
 

@@ -36,28 +36,24 @@ import firebaseIcon from './icons/firebase.png';
 import gcpIcon from './icons/gcp.png';
 import openaiIcon from './icons/openai.png';
 import claudeIcon from './icons/claude.png';
+import emergentIcon from './icons/emergent.png';
+import githubCopilotIcon from './icons/githubcopilot.png';
+import playwrightIcon from './icons/playwright.png';
 
 function Skills() {
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Frontend & Mobile",
       skills: [
-        { name: "JavaScript", icon: jsIcon, level: "Expert" },
-        { name: "Python", icon: pythonIcon, level: "Advanced" },
-        { name: "Java", icon: javaIcon, level: "Advanced" },
-        { name: "C/C++", icon: cppIcon, level: "Intermediate" },
-        { name: "HTML", icon: htmlIcon, level: "Expert" },
-        { name: "CSS", icon: cssIcon, level: "Expert" },
-        { name: "SQL", icon: sqlIcon, level: "Advanced" }
+        { name: "React", icon: reactIcon, level: "Expert" },
+        { name: "Next.js", icon: nextjsIcon, level: "Advanced" },
+        { name: "React Native", icon: reactIcon, level: "Advanced" },
+        { name: "Expo", icon: expoIcon, level: "Advanced" }
       ]
     },
     {
-      title: "Frameworks & Libraries",
+      title: "Backend & Data",
       skills: [
-        { name: "React.js", icon: reactIcon, level: "Expert" },
-        { name: "Next.js", icon: nextjsIcon, level: "Advanced" },
-        { name: "React Native", icon: reactIcon, level: "Advanced" },
-        { name: "Expo", icon: expoIcon, level: "Advanced" },
         { name: "Node.js", icon: nodeIcon, level: "Advanced" },
         { name: "Spring Boot", icon: springBootIcon, level: "Intermediate" },
         { name: "MongoDB", icon: mongodbIcon, level: "Advanced" },
@@ -65,42 +61,69 @@ function Skills() {
       ]
     },
     {
-      title: "Operating Systems",
+      title: "AI & GenAI",
       skills: [
-        { name: "Linux", icon: linuxIcon, level: "Advanced" },
-        { name: "Ubuntu", icon: ubuntuIcon, level: "Advanced" },
-        { name: "Kali Linux", icon: kaliIcon, level: "Intermediate" },
-        { name: "Windows", icon: windowsIcon, level: "Expert" },
-        { name: "macOS", icon: macIcon, level: "Advanced" },
-        { name: "Android", icon: androidIcon, level: "Intermediate" }
-      ]
-    },
-    {
-      title: "Development Tools",
-      skills: [
-        { name: "VS Code", icon: vscodeIcon, level: "Expert" },
-        { name: "Cursor", icon: cursorIcon, level: "Expert" },
-        { name: "Android Studio", icon: androidStudioIcon, level: "Advanced" },
-        { name: "Visual Studio", icon: visualStudioIcon, level: "Intermediate" },
-        { name: "Anaconda", icon: anacondaIcon, level: "Advanced" },
-        { name: "Sublime Text", icon: sublimeIcon, level: "Intermediate" },
-        { name: "Nmap", icon: nmapIcon, level: "Intermediate" },
-        { name: "Wireshark", icon: wiresharkIcon, level: "Intermediate" }
+        { name: "OpenAI API", icon: openaiIcon, level: "Advanced" },
+        { name: "Claude", icon: claudeIcon, level: "Advanced" },
+        { name: "LangChain", icon: "https://cdn.simpleicons.org/langchain", level: "Advanced", iconWithBg: true },
+        { name: "Hugging Face", icon: "https://cdn.simpleicons.org/huggingface", level: "Advanced" }
       ]
     },
     {
       title: "Cloud & DevOps",
       skills: [
         { name: "AWS", icon: awsIcon, level: "Advanced" },
-        { name: "Google Cloud Platform", icon: gcpIcon, level: "Advanced" },
-        { name: "Firebase", icon: firebaseIcon, level: "Advanced" }
+        { name: "Firebase", icon: firebaseIcon, level: "Advanced" },
+        { name: "Docker", icon: "https://cdn.simpleicons.org/docker", level: "Advanced" },
+        { name: "GitHub Actions", icon: "https://cdn.simpleicons.org/githubactions", level: "Advanced" },
+        { name: "GCP", icon: gcpIcon, level: "Advanced" }
       ]
     },
     {
-      title: "AI & Machine Learning",
+      title: "Design & Coding Platforms",
       skills: [
-        { name: "OpenAI API", icon: openaiIcon, level: "Advanced" },
-        { name: "Claude AI", icon: claudeIcon, level: "Advanced" }
+        { name: "Figma", icon: "https://cdn.simpleicons.org/figma", level: "Advanced" },
+        { name: "Cursor", icon: cursorIcon, level: "Expert" },
+        { name: "VS Code", icon: vscodeIcon, level: "Expert" },
+        { name: "GitHub Copilot", icon: githubCopilotIcon, level: "Advanced", iconWithBg: true },
+        { name: "Emergent", icon: emergentIcon, level: "Advanced" },
+        { name: "Android Studio", icon: androidStudioIcon, level: "Advanced" },
+        { name: "Anaconda", icon: anacondaIcon, level: "Advanced" },
+        { name: "Visual Studio", icon: visualStudioIcon, level: "Intermediate" },
+        { name: "Sublime Text", icon: sublimeIcon, level: "Intermediate" }
+      ]
+    },
+    {
+      title: "Testing & Security",
+      skills: [
+        { name: "Jest", icon: "https://cdn.simpleicons.org/jest", level: "Advanced" },
+        { name: "Playwright", icon: playwrightIcon, level: "Advanced", iconWithBg: true },
+        { name: "Nmap", icon: nmapIcon, level: "Intermediate" },
+        { name: "Wireshark", icon: wiresharkIcon, level: "Intermediate" }
+      ]
+    },
+    {
+      title: "Languages",
+      skills: [
+        { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript", level: "Advanced" },
+        { name: "JavaScript", icon: jsIcon, level: "Expert" },
+        { name: "Python", icon: pythonIcon, level: "Advanced" },
+        { name: "Java", icon: javaIcon, level: "Advanced" },
+        { name: "SQL", icon: sqlIcon, level: "Advanced" },
+        { name: "HTML", icon: htmlIcon, level: "Expert" },
+        { name: "CSS", icon: cssIcon, level: "Expert" },
+        { name: "C/C++", icon: cppIcon, level: "Intermediate" }
+      ]
+    },
+    {
+      title: "Operating Systems",
+      skills: [
+        { name: "Windows", icon: windowsIcon, level: "Expert" },
+        { name: "macOS", icon: macIcon, level: "Advanced" },
+        { name: "Android", icon: androidIcon, level: "Intermediate" },
+        { name: "Ubuntu", icon: ubuntuIcon, level: "Advanced" },
+        { name: "Linux", icon: linuxIcon, level: "Advanced" },
+        { name: "Kali Linux", icon: kaliIcon, level: "Intermediate" }
       ]
     }
   ];
@@ -153,11 +176,13 @@ function Skills() {
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <img 
-                    src={skill.icon} 
-                    alt={skill.name} 
-                    className={styles.skillIcon}
-                  />
+                  <span className={skill.iconWithBg ? styles.skillIconWrap : undefined}>
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name} 
+                      className={styles.skillIcon}
+                    />
+                  </span>
                   <span className={styles.skillName}>{skill.name}</span>
                   <span className={styles.skillLevel}>{skill.level}</span>
                   <div className={styles.progressBar}>

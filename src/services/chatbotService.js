@@ -1,8 +1,10 @@
-// Chatbot Service for RAG API calls
+// Chatbot Service for RAG API calls with LangChain support
 // SECURITY NOTE: OpenAI API key is stored securely in backend API, never in frontend
 // This service calls an external API endpoint (must be hosted separately - GitHub Pages cannot run backend code)
 
 const API_ENDPOINT = process.env.REACT_APP_CHATBOT_API_URL || 'https://your-api-endpoint.com/api/chat';
+const LANGCHAIN_ENDPOINT = process.env.REACT_APP_CHATBOT_LANGCHAIN_URL || 'https://your-api-endpoint.com/api/chat-langchain';
+const STREAMING_ENDPOINT = process.env.REACT_APP_CHATBOT_STREAM_URL || 'https://your-api-endpoint.com/api/chat-stream';
 
 // Call backend API (preferred method)
 async function callBackendAPI(message, conversationHistory) {
@@ -27,18 +29,127 @@ async function callBackendAPI(message, conversationHistory) {
 
 // Direct OpenAI API calls removed for security - API key must be stored in backend only
 
-export async function sendMessage(message, conversationHistory = []) {
+// Streaming API call (for voice chatbot with real-time responses)
+export async function sendMessageStream(message, sessionId, conversationHistory = [], onChunk) {
+  try {
+    if (!STREAMING_ENDPOINT || STREAMING_ENDPOINT.includes('your-api-endpoint')) {
+      // Fallback to non-streaming if streaming endpoint not configured
+      return await sendMessage(message, conversationHistory, sessionId);
+    }
+
+    const response = await fetch(STREAMING_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message,
+        sessionId: sessionId || 'default',
+        conversationHistory: conversationHistory.slice(-5),
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Streaming API error: ${response.status}`);
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let fullResponse = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          try {
+            const data = JSON.parse(line.slice(6));
+            if (data.chunk) {
+              fullResponse += data.chunk;
+              if (onChunk) {
+                onChunk(data.chunk, fullResponse);
+              }
+            }
+            if (data.done) {
+              return data.fullResponse || fullResponse;
+            }
+            if (data.error) {
+              throw new Error(data.error);
+            }
+          } catch (e) {
+            // Skip invalid JSON lines
+            if (e instanceof SyntaxError) continue;
+            throw e;
+          }
+        }
+      }
+    }
+
+    return fullResponse;
+  } catch (error) {
+    console.error('Streaming error:', error);
+    // Fallback to non-streaming
+    return await sendMessage(message, conversationHistory, sessionId);
+  }
+}
+
+// LangChain API call (non-streaming, with conversation memory)
+export async function sendMessageLangChain(message, conversationHistory = [], sessionId = 'default') {
+  try {
+    if (!LANGCHAIN_ENDPOINT || LANGCHAIN_ENDPOINT.includes('your-api-endpoint')) {
+      // Fallback to original API
+      return await sendMessage(message, conversationHistory);
+    }
+
+    const response = await fetch(LANGCHAIN_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message,
+        conversationHistory: conversationHistory.slice(-5),
+        sessionId,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`LangChain API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.response;
+  } catch (error) {
+    console.error('LangChain API error:', error);
+    // Fallback to original API
+    return await sendMessage(message, conversationHistory);
+  }
+}
+
+// Original API call (fallback)
+export async function sendMessage(message, conversationHistory = [], sessionId = 'default') {
   try {
     // Check if backend API endpoint is configured
     if (!API_ENDPOINT || API_ENDPOINT.includes('your-api-endpoint')) {
-      throw new Error('Backend API endpoint not configured. Please set REACT_APP_CHATBOT_API_URL in your environment variables. The API key must be stored securely in the backend, not in the frontend.');
+      // Use fallback response if no API configured
+      return getFallbackResponse(message);
     }
     
-    // Only use backend API (secure method)
-    return await callBackendAPI(message, conversationHistory);
+    // Try LangChain endpoint first, fallback to original
+    try {
+      return await sendMessageLangChain(message, conversationHistory, sessionId);
+    } catch (e) {
+      // Fallback to original API
+      return await callBackendAPI(message, conversationHistory);
+    }
   } catch (error) {
     console.error('Error calling chatbot API:', error);
-    throw error;
+    // Final fallback to keyword matching
+    return getFallbackResponse(message);
   }
 }
 
@@ -63,12 +174,12 @@ export function getFallbackResponse(query) {
   
   // Projects / Portfolio
   if (lowerQuery.match(/\b(project|app|application|built|developed|created|portfolio|github|repository)\b/)) {
-    return "Yash has built several full-stack projects: International Information Assistant (Next.js, TypeScript - uses AI/ChatGPT API with custom prompts to determine transit visa requirements), Where's Religion (React Native, Next.js, Firebase - uses AI for generating tags for user content, 1,000+ MAUs, wheresreligion.org), Playlist Tracker (React, REST APIs - PWA for bidirectional playlist transfer between YouTube, Spotify, Apple Music, Amazon Music), Museum Web Platform (React.js, Next.js, AWS - 3,000+ monthly visitors, 35% faster data retrieval), and Crypto Tracker (React.js, Netlify, CoinGecko API). Check out github.com/yashcoded for more details.";
+    return "Yash has built several full-stack projects: Where's Religion (web + mobile, 2,000+ users), Missouri Crossroads (museum platform, 3,000+ visitors), Manashray (psychiatry clinic website), AI Agent Toolbox (LangChain, FastAPI, Docker), Bhatia-Buzz (community app, Expo, Firebase), International Travel Information (AI transit/visa), Playlist Tracker (PWA), and Crypto Tracker. More at github.com/yashcoded.";
   }
   
   // Skills / Technologies
   if (lowerQuery.match(/\b(skill|technology|tech|framework|language|proficient|expert|know|use|tools|stack|typescript|javascript|react|next|node)\b/)) {
-    return "Yash is a full-stack developer with expertise in both front-end and back-end. Front-End: TypeScript, JavaScript, HTML, CSS, React, Next.js, React Native (Expo), EmberJS, component-based architecture, responsive design, accessibility, performance optimization. Back-End: Node.js, Express, RESTful APIs, authentication, caching, SQL, database systems. APIs: REST, OpenAPI, GraphQL (basic). AI/ML: OpenAI ChatGPT API integration, AI-powered content generation, prompt engineering. Testing: Jest, Playwright. DevOps: Git, GitHub Actions, Jenkins, Docker. Cloud: AWS (S3, CloudFront, DynamoDB), CI/CD pipelines.";
+    return "Yash is a full-stack developer. Front-End: TypeScript, JavaScript, React, Next.js, React Native (Expo), HTML, CSS. Back-End: Node.js, Express, SQL, MongoDB, PostgreSQL, Firebase. AI/ML: OpenAI API, LangChain, Hugging Face, Claude, Computer Vision. DevOps/Cloud: AWS, GCP, Docker, GitHub Actions, CI/CD. Tools: VS Code, Cursor, GitHub Copilot, Emergent, Figma, Anaconda, Android Studio. OS: Linux, Ubuntu, Windows, macOS, Kali Linux.";
   }
   
   // Education

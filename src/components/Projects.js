@@ -3,18 +3,68 @@
 import React from 'react';
 import styles from './styles/Projects.module.css';
 import { motion } from 'framer-motion';
-import { FaReact, FaDatabase, FaMobile, FaMusic, FaGlobe } from 'react-icons/fa';
+import { FaDatabase, FaMobile, FaMusic, FaGlobe, FaMedkit, FaLandmark, FaDesktop, FaRobot, FaUsers } from 'react-icons/fa';
 
 function Projects() {
   const projects = [
     {
+      title: "Where's Religion",
+      place: "Saint Louis University",
+      duration: "2023 – 2025",
+      year: 2025,
+      description: [
+        "Owned end-to-end development of production web and mobile platform (wheresreligion.org) serving 2,000+ active users across iOS, Android, and web",
+        "Web app: Next.js monorepo (packages/web, server, lrda-server-core) with Tiptap, shadcn, Firebase; mobile app: React Native, TypeScript, Expo (Lived Religion / LRDA), connecting to the same backend",
+        "Led delivery across 5 parallel feature tracks, managing 15 developers and shipping MVP; designed LLM-based content classification pipeline, reducing manual moderation by 70%",
+        "Open source: oss-slu/lrda_website (web), oss-slu/lrda_mobile (mobile)"
+      ],
+      url: "https://wheresreligion.org",
+      techStack: ["TypeScript", "React", "Next.js", "React Native", "Expo", "Firebase", "LLM"],
+      icon: [FaDesktop, FaMobile],
+      status: "Active",
+      metrics: "2,000+ active users · Web + Mobile"
+    },
+    {
+      title: "Missouri Crossroads",
+      place: "University of Missouri St. Louis",
+      duration: "2025",
+      year: 2025,
+      description: [
+        "Museum web platform for highlighting and preserving the history of Missouri; live at missouricrossroads.org, used by 3,000+ monthly visitors",
+        "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime; led cross-functional team of 4 designing React/Next.js UI for 200+ locations",
+        "Open source (GPL-3.0); Next.js, TypeScript, AWS Amplify, GitHub Actions; geographic and historical content with mapping and discovery"
+      ],
+      url: "https://missouricrossroads.org/",
+      techStack: ["Next.js", "TypeScript", "AWS", "DynamoDB", "S3", "Google Maps", "Amplify"],
+      icon: FaLandmark,
+      status: "Active",
+      metrics: "3,000+ monthly visitors"
+    },
+    {
+      title: "International Travel Information",
+      place: "Personal Project",
+      duration: "2023",
+      year: 2023,
+      description: [
+        "Built comprehensive AI-powered travel information platform for visa requirements and transit information",
+        "Integrated intelligent chatbot using OpenAI for personalized travel advice and real-time Q&A",
+        "Developed user-friendly form system for route selection, layover details, and documentation guidance",
+        "Implemented real-time country search and validation with 227+ countries database; deployed on Vercel"
+      ],
+      url: "https://internationalinformation.vercel.app/",
+      techStack: ["Next.js", "React", "OpenAI API", "AI Integration", "Vercel", "Travel API"],
+      icon: FaGlobe,
+      status: "Active",
+      metrics: "AI-powered travel assistance"
+    },
+    {
       title: "Playlist Tracker",
       place: "Personal Project",
-      duration: "November 2024",
+      duration: "2024",
+      year: 2024,
       description: [
         "Built Progressive Web App (PWA) for bidirectional playlist transfer between YouTube, Spotify, Apple Music, and Amazon Music",
-        "Developed with Next.js 15 App Router, TypeScript, and Tailwind CSS for modern, responsive design",
-        "Implemented PWA features including offline support, installable app experience, and optimized performance",
+        "Developed with Next.js 15 App Router, TypeScript, and Tailwind CSS; PWA features including offline support and installable app experience",
         "Designed secure architecture with no server-side data storage, ensuring user privacy and data protection"
       ],
       url: "https://github.com/yashcoded/playlist_tracker",
@@ -24,80 +74,67 @@ function Projects() {
       metrics: "Multi-platform playlist sync"
     },
     {
-      title: "Where's Religion",
-      place: "Saint Louis University",
-      duration: "February 2023 - December 2025",
-      description: [
-        "Owned end-to-end development of production web and mobile platform serving 2,000+ active users across iOS, Android, and web",
-        "Led delivery across 5 parallel feature tracks, managing 15 developers and shipping MVP under fixed constraints",
-        "Designed and shipped an LLM-based content classification pipeline, reducing manual moderation by 70%",
-        "Built scalable systems using TypeScript, React, Next.js, React Native (Expo), and Firebase"
-      ],
-      url: "https://wheresreligion.org",
-      techStack: ["TypeScript", "React", "Next.js", "React Native", "Firebase", "AWS", "LLM"],
-      icon: FaMobile,
-      status: "Active",
-      metrics: "2,000+ active users"
-    },
-    {
-      title: "Museum Web Platform",
-      place: "University of Missouri St. Louis",
-      duration: "June 2025 - September 2025",
-      description: [
-        "Developed museum web platform with AWS/Google Maps, used by 3,000+ monthly visitors",
-        "Cut data retrieval 35% with DynamoDB/S3 backend; ensured 99.9% uptime",
-        "Led a cross-functional team of 4 in designing React/Next.js UI for 200+ museum locations"
-      ],
-      techStack: ["React.js", "Next.js", "AWS", "DynamoDB", "S3", "Google Maps"],
-      icon: FaReact,
-      status: "Active",
-      metrics: "3,000+ monthly visitors"
-    },
-    {
-      title: "International Travel Information",
+      title: "Manashray",
       place: "Personal Project",
-      duration: "December 2023",
+      duration: "2025",
+      year: 2025,
       description: [
-        "Built comprehensive AI-powered travel information platform for visa requirements and transit information",
-        "Integrated intelligent chatbot using OpenAI for personalized travel advice and real-time Q&A",
-        "Developed user-friendly form system for route selection, layover details, and documentation guidance",
-        "Implemented real-time country search and validation with 227+ countries database",
-        "Deployed on Vercel with optimized performance and responsive design for global travelers"
+        "Built professional website for Manashray — a psychiatry and mental health clinic (Making Mental Health Vital) for my friend Dr. Madhura Godbole Jani",
+        "Showcases doctor profile, credentials (MBBS, MD Psychiatry, DNB), certifications, awards, and services (depression, anxiety, OCD, child & adolescent mental health, therapy, corporate workshops)",
+        "Responsive design with contact info, location, appointment details, and bilingual (English/Hindi) support; manashraydrmadhura.in"
       ],
-      url: "https://internationalinformation.vercel.app/",
-      techStack: ["Next.js", "React", "OpenAI API", "AI Integration", "Vercel", "Travel API"],
-      icon: FaGlobe,
+      url: "https://www.manashraydrmadhura.in/",
+      techStack: ["React", "Responsive Web", "Healthcare", "Professional Site"],
+      icon: FaMedkit,
       status: "Active",
-      metrics: "AI-powered travel assistance"
+      metrics: "manashraydrmadhura.in"
+    },
+    {
+      title: "AI Agent Toolbox",
+      place: "Personal Project",
+      duration: "2025",
+      year: 2025,
+      description: [
+        "Comprehensive AI agent system built with LangChain, FastAPI, and Next.js: streaming agents, tool calling, evaluations, and observability",
+        "Multiple AI agents (Research, Code) with extensible tool registry (calculator, search, code analysis); SSE streaming, PostgreSQL metrics, Redis caching",
+        "Next.js dashboard with chat, tool visualizer, and eval dashboard; Docker-ready with docker-compose; CI/CD via GitHub Actions (GPL-3.0)"
+      ],
+      url: "https://github.com/yashcoded/ai_agent_toolbox/tree/copilot/implement-ai-agent-toolbox",
+      techStack: ["LangChain", "FastAPI", "Next.js", "PostgreSQL", "Redis", "Docker", "SSE"],
+      icon: FaRobot,
+      status: "Active",
+      metrics: "Research & Code agents · Eval framework"
+    },
+    {
+      title: "Bhatia-Buzz",
+      place: "Personal Project",
+      duration: "2025",
+      year: 2025,
+      description: [
+        "Sindhi community mobile app (Expo / React Native, TypeScript) with Instagram-like feed, request management, and matrimonial matching",
+        "Firebase (Firestore, Auth, Storage, Functions, Cloud Messaging); Redux Toolkit, React Navigation; Instagram Graph API integration; pull-to-refresh, offline caching",
+        "Playwright E2E (69 tests); Docker; CI pipeline (tests → Docker → Expo); admin moderation for requests and matrimonial profiles"
+      ],
+      url: "https://github.com/yashcoded/Bhatia-Buzz",
+      techStack: ["Expo", "React Native", "TypeScript", "Firebase", "Redux", "Playwright"],
+      icon: FaUsers,
+      status: "Active",
+      metrics: "Community app · 69 E2E tests"
     },
     {
       title: "Crypto Tracker",
       place: "Personal Project",
-      duration: "September 2023",
+      duration: "2023",
+      year: 2023,
       description: [
         "Developed dashboard for top 100 assets with 60s updates for 500+ users",
-        "Explained optimization strategies to teammates; reduced load 25% using React hooks/lazy load",
-        "Built with React.js, Netlify, and CoinGecko API integration"
+        "Reduced load 25% using React hooks and lazy loading; built with React.js, Netlify, and CoinGecko API"
       ],
       url: "https://btcvalestracker.netlify.app",
       techStack: ["React.js", "Netlify", "CoinGecko API", "Performance Optimization"],
       icon: FaDatabase,
       status: "Completed",
       metrics: "500+ users, 25% load reduction"
-    },
-    {
-      title: "Hardware-Cloud Integration",
-      place: "Eezee Business Machines",
-      duration: "January 2021 - July 2022",
-      description: [
-        "Integrated 10+ hardware systems with cloud, boosting throughput 20%",
-        "Reduced downtime 15% by collaborating with support and operations teams",
-        "Improved release reliability from 30% to 75% via automation and guided 2 interns on QA practices"
-      ],
-      techStack: ["Cloud Integration", "Hardware Systems", "Automation", "CI/CD", "QA"],
-      icon: FaDatabase,
-      status: "Completed",
-      metrics: "20% throughput boost, 75% reliability"
     },
   ];
 
@@ -111,6 +148,8 @@ function Projects() {
     }
   };
 
+  const projectsByYear = [...projects].sort((a, b) => (b.year || 0) - (a.year || 0));
+
   return (
     <motion.div
       className={styles.container}
@@ -119,8 +158,9 @@ function Projects() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, staggerChildren: 0.1 }}
     >
-      {projects.map((project, index) => {
-        const IconComponent = project.icon;
+      {projectsByYear.map((project, index) => {
+        const iconOrIcons = project.icon;
+        const isIconArray = Array.isArray(iconOrIcons);
         return (
           <motion.div
             key={index}
@@ -136,7 +176,9 @@ function Projects() {
           >
             <div className={styles.cardHeader}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                <IconComponent size={24} color="#e50914" />
+                {isIconArray
+                  ? iconOrIcons.map((Icon, i) => <Icon key={i} size={24} color="#e50914" style={{ marginRight: i < iconOrIcons.length - 1 ? 4 : 0 }} />)
+                  : (() => { const Icon = iconOrIcons; return <Icon size={24} color="#e50914" />; })()}
                 <h3 className={styles.cardTitle}>{project.title}</h3>
               </div>
               <div className={styles.cardSubtitle}>

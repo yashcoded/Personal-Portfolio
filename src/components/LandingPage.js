@@ -1,10 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles/LandingPage.module.css';
-import { FaLinkedin, FaGithub, FaEnvelope, FaUniversity, FaBriefcase, FaBook, FaFolderOpen, FaGraduationCap } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaUniversity, FaBriefcase, FaBook, FaFolderOpen, FaGraduationCap, FaFilePdf, FaFileAlt } from 'react-icons/fa';
 import myPhoto from './icons/my_photo.jpg';
 import { Link } from 'react-router-dom';
+import html2pdf from 'html2pdf.js';
 
 const LandingPage = () => {
+  const pdfRef = useRef(null);
+  const [isPdfGenerating, setIsPdfGenerating] = useState(false);
+
+  const handleDownloadPdf = () => {
+    if (!pdfRef.current || isPdfGenerating) return;
+    setIsPdfGenerating(true);
+    const button = pdfRef.current.querySelector(`.${styles.downloadPdfBtn}`);
+    if (button) button.style.visibility = 'hidden';
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+      filename: 'Yash_Bhatia_Portfolio.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, logging: false },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+    };
+
+    html2pdf().set(opt).from(pdfRef.current).save().then(() => {
+      setIsPdfGenerating(false);
+      if (button) button.style.visibility = '';
+    }).catch(() => {
+      setIsPdfGenerating(false);
+      if (button) button.style.visibility = '';
+    });
+  };
+
   useEffect(() => {
     // Save original styles
     const originalBackground = document.body.style.background;
@@ -42,7 +70,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={pdfRef}>
       <header className={styles.header}>
         <h1 className={styles.name}>Yash Bhatia</h1>
         <div className={styles.profileImageContainer}>
@@ -62,6 +90,20 @@ const LandingPage = () => {
           <Link to="/portfolio" className={styles.socialIcon} title="View Full Portfolio">
             <FaFolderOpen />
           </Link>
+          <a href="/Yash_Bhatia_Resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="View Resume">
+            <FaFileAlt />
+          </a>
+          <button
+            type="button"
+            className={styles.downloadPdfBtn}
+            onClick={handleDownloadPdf}
+            disabled={isPdfGenerating}
+            title="Download portfolio as PDF"
+            aria-label="Download portfolio as PDF"
+          >
+            <FaFilePdf />
+            <span>{isPdfGenerating ? 'Generating…' : 'Download PDF'}</span>
+          </button>
         </div>
       </header>
 

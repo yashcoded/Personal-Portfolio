@@ -13,6 +13,7 @@ import Projects from './components/Projects';
 import Research from './components/Research';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
+import VoiceChatbot from './components/VoiceChatbot';
 import './components/styles/Slide.module.css';
 import "./App.css"
 
@@ -62,6 +63,7 @@ function AppContent() {
       <TitleUpdater />
       {!isLandingPage && <Navbar />}
       <Chatbot />
+      <VoiceChatbot />
       <Routes>
         {/* Landing Page Routes */}
         <Route path="/" element={<LandingPage />} />
